@@ -12,8 +12,9 @@
                 <!-- Links -->
                 <ul class="navbar-nav m-auto justify-content-center">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link text-uppercase" href="category.html"> Home <span class="sr-only">(current)</span>
-                        </a>
+                        <router-link to="/">
+                            <a class="nav-link text-uppercase"> Home <span class="sr-only">(current)</span></a>
+                        </router-link>
                     </li>
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle text-uppercase" href="category.html">Category</a>
@@ -51,10 +52,14 @@
                         <a class="nav-link text-uppercase" href="https://www.facebook.com/vodka.style.87">Blog</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="contact-us.html">Contact Us</a>
+                        <router-link to="/contact-us">
+                            <a class="nav-link text-uppercase">Contact Us</a>
+                        </router-link>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="contact-us.html">About Us</a>
+                        <router-link to="/about-us">
+                            <a class="nav-link text-uppercase">About Us</a>
+                        </router-link>
                     </li>
                 </ul>
                 <!-- Links -->
