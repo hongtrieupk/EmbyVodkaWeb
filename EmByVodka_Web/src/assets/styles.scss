@@ -384,7 +384,7 @@ body{
 	&.navbar-dark{
 		.navbar-toggler{
 			.navbar-toggler-icon{
-				color:$white;
+				color:$gray;
 			}
 		}
 	}
@@ -404,7 +404,7 @@ body{
 		.navbar-toggler-icon{
 			background-size:70% 100%;
 			background:none;
-			color:$white;
+			color:$gray;
 			height:auto;
 			i{
 				vertical-align:middle;
