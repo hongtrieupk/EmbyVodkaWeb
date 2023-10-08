@@ -1,6 +1,6 @@
 
 <template>
-    <LayoutHeader />
+    <ShopLayoutHeader />
     <main>
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="slider-wrapper my-40 my-sm-25 float-left w-100">
@@ -2133,7 +2133,7 @@
 
     </footer>
     <!-- Footer -->
-    <LayoutCookieAlert />
+    <ShopLayoutCookieAlert />
     <!-- product_view modal -->
     <div class="modal fade product_view" id="product_view" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -2331,15 +2331,15 @@ import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'theia-sticky-sidebar'
 import 'masonry-layout/dist/masonry.pkgd'
 import '../../assets/legacy/inview'
-import LayoutHeader from './layout/LayoutHeader.vue'
-import LayoutCookieAlert from './layout/LayoutCookieAlert.vue'
+import ShopLayoutHeader from './layout/ShopLayoutHeader.vue'
+import ShopLayoutCookieAlert from './layout/ShopLayoutCookieAlert.vue'
 import { onMounted } from 'vue'
 import { initializeShoppingTheme } from '../../assets/legacy/vendor-template'
 export default {
     name: 'App',
     components: {
-        LayoutHeader,
-        LayoutCookieAlert
+        ShopLayoutHeader,
+        ShopLayoutCookieAlert
     },
     setup() {
         onMounted(() => {

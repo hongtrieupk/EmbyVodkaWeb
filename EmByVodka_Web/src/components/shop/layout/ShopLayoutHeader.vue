@@ -122,7 +122,7 @@
 						</div>
 					</div>
 				</div>
-				<LayoutMenu />
+				<ShopLayoutMenu />
 			</div>
 		</div>
 	</header>
@@ -197,11 +197,11 @@
 	</div>
 </template>
 <script>
-import LayoutMenu from './LayoutMenu.vue'
+import ShopLayoutMenu from './ShopLayoutMenu.vue'
 export default {
-	name: 'LayoutHeader',
+	name: 'ShopLayoutHeader',
 	components: {
-		LayoutMenu
+		ShopLayoutMenu
 	}
 }
 </script>

@@ -14,7 +14,7 @@ import { onMounted } from 'vue'
 import { initializeCookieAlert } from '../../../assets/legacy/cookiealert'
 
 export default {
-    name: 'LayoutCookieAlert',
+    name: 'ShopLayoutCookieAlert',
     setup() {
         onMounted(() => {
             initializeCookieAlert();

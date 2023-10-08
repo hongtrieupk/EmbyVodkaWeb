@@ -48,7 +48,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="category.html">Blog</a>
+                        <a class="nav-link text-uppercase" href="https://www.facebook.com/vodka.style.87">Blog</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link text-uppercase" href="contact-us.html">Contact Us</a>
@@ -139,6 +139,6 @@
 </template>
 <script>
 export default {
-    name: 'LayoutMenu'
+    name: 'ShopLayoutMenu'
 }
 </script>

@@ -845,7 +845,7 @@ export function initializeShoppingTheme(){
 
     });
     
-    var max_link = 4;
+    var max_link = 5;
     var items = $('.navbar.navbar-full .navbar-nav > .nav-item');
     var surplus = items.slice(max_link, items.length);
     surplus.wrapAll('<li class="more_menu nav-item dropdown"><ul class="menu-dropdown cat-drop-menu">');
@@ -986,7 +986,7 @@ function responsivemenu() {
     if ($(document).width() <= 991) {
         $('.header-default .header-main .container .header-right').insertAfter('.navbar-responsive');
     } else {
-        $('.header-default .menu .container .header-right').insertAfter('.header-middle');
+        $('.header-default .menu .header-right').insertAfter('.header-middle');
     }
 }
 
