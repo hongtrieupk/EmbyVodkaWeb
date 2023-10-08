@@ -1,5 +1,4 @@
 <template>
-
 	<LayoutHeader />
 	<main>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
@@ -8,7 +7,7 @@
 			<div class="slider slider-for owl-carousel">
 				<div>
 					<a href="#">
-						<img src="./assets/img/slider/wrapper-2.jpeg" alt="" />
+						<img src="./assets/img/slider/sample-04.jpg" alt="" />
 					</a>
 					<div class="slider-content-wrap center effect_top">
 						<div class="slider-title mb-20 text-capitalize float-left w-100">our specials</div>
@@ -18,7 +17,7 @@
 				</div>
 				<div>
 					<a href="#">
-						<img src="./assets/img/slider/wrapper-1.jpeg" alt="" />
+						<img src="./assets/img/slider/sample-05.jpg" alt="" />
 					</a>
 					<div class="slider-content-wrap center effect_bottom">
 						<div class="slider-title mb-20 text-capitalize float-left w-100">about us</div>
@@ -34,7 +33,8 @@
 				<div class="container">
 					<div class="ttcmsaboutus ttabout d-lg-flex d-md-flex d-sm-flex d-xs-block align-items-center">
 						<div class="ttcmsabout-img col-sm-6 col-xs-12 float-left left-to-right hb-animate-element">
-							<div class="ttimage"><a href="#"><img src="./assets/img/banner/cms-aboutus.jpg" alt="banner_1"></a>
+							<div class="ttimage"><a href="#"><img src="./assets/img/banner/cms-aboutus.jpg"
+										alt="banner_1"></a>
 							</div>
 						</div>
 						<div class="ttcmsabout-desc col-sm-6 col-xs-12 float-left right-to-left hb-animate-element">
@@ -2169,7 +2169,8 @@
 				<div class="ttcmsservices owl-carousel">
 					<div class="ttservice col-sm-4 d-md-flex align-items-center">
 						<div class="icon">
-							<div class="ttgift_img service-icon"><img src="./assets/img/logos/icon1_small.png" alt="icon1_small" />
+							<div class="ttgift_img service-icon"><img src="./assets/img/logos/icon1_small.png"
+									alt="icon1_small" />
 							</div>
 						</div>
 						<div class="service-content text-md-left">
@@ -2179,7 +2180,8 @@
 					</div>
 					<div class="ttservice col-sm-4 d-md-flex align-items-center">
 						<div class="icon">
-							<div class="ttdisc_img service-icon"><img src="./assets/img/logos/icon2_small.png" alt="icon2_small" />
+							<div class="ttdisc_img service-icon"><img src="./assets/img/logos/icon2_small.png"
+									alt="icon2_small" />
 							</div>
 						</div>
 						<div class="service-content text-md-left">
@@ -2196,16 +2198,6 @@
 							<div class="service-title">Money Back Guarantee</div>
 							<div class="service-desc">Proin gravida nibh vel velit auctor.</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Copyright -->
-		<div class="footer-bottom-wrap float-left w-100">
-			<div class="container">
-				<div class="row">
-					<div class="footer-copyright text-center py-3">
-						© 2019 - Boostrap theme by store™
 					</div>
 				</div>
 			</div>
@@ -2310,32 +2302,32 @@
 							<div class="product-large-image tab-content">
 								<div class="tab-pane active" id="product-1" role="tabpanel" aria-labelledby="product-tab-1">
 									<div class="single-img img-full">
-										<a href="img/products/01.jpg"><img src="./assets/img/products/01.jpg" class="img-fluid"
-												alt=""></a>
+										<a href="img/products/01.jpg"><img src="./assets/img/products/01.jpg"
+												class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="tab-pane" id="product-2" role="tabpanel" aria-labelledby="product-tab-2">
 									<div class="single-img">
-										<a href="img/products/02.jpg"><img src="./assets/img/products/02.jpg" class="img-fluid"
-												alt=""></a>
+										<a href="img/products/02.jpg"><img src="./assets/img/products/02.jpg"
+												class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="tab-pane" id="product-3" role="tabpanel" aria-labelledby="product-tab-3">
 									<div class="single-img">
-										<a href="img/products/03.jpg"><img src="./assets/img/products/03.jpg" class="img-fluid"
-												alt=""></a>
+										<a href="img/products/03.jpg"><img src="./assets/img/products/03.jpg"
+												class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="tab-pane" id="product-4" role="tabpanel" aria-labelledby="product-tab-4">
 									<div class="single-img">
-										<a href="img/products/04.jpg"><img src="./assets/img/products/04.jpg" class="img-fluid"
-												alt=""></a>
+										<a href="img/products/04.jpg"><img src="./assets/img/products/04.jpg"
+												class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="tab-pane" id="product-5" role="tabpanel" aria-labelledby="product-tab-5">
 									<div class="single-img">
-										<a href="img/products/05.jpg"><img src="./assets/img/products/05.jpg" class="img-fluid"
-												alt=""></a>
+										<a href="img/products/05.jpg"><img src="./assets/img/products/05.jpg"
+												class="img-fluid" alt=""></a>
 									</div>
 								</div>
 							</div>
@@ -2521,12 +2513,20 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 import LayoutHeader from './components/layout/header.vue'
+import { initializeCookieAlert } from  './assets/legacy/cookiealert'
 export default {
 	name: 'App',
 	components: {
 		LayoutHeader
+	},
+	setup() {
+		onMounted(() => {
+			initializeCookieAlert();
+		})
 	}
 }
+
 </script>
 <style lang="scss"></style>

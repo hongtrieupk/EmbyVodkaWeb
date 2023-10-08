@@ -18,7 +18,7 @@
                         <a class="nav-link dropdown-toggle text-uppercase" href="category.html">Category</a>
                         <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-3 px-3">
                             <div class="row">
-                                <div class="col-md-12 col-xl-4 sub-menu mb-xl-0 mb-4">
+                                <div class="col-md-12 col-xl-6 sub-menu mb-xl-0 mb-4">
                                     <!--Featured image-->
                                     <ul class="list-unstyled">
                                         <li>
@@ -35,7 +35,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6 col-xl-4 sub-menu mb-0">
+                                <div class="col-md-6 col-xl-6 sub-menu mb-0">
                                     <ul class="list-unstyled">
                                         <li>
                                             <span class="menu-banner"><img src="../../assets/img/banner/menu-banner.jpg"

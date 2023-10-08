@@ -21,17 +21,13 @@
 								<div id="language-dropdown" class="language">
 									<ul>
 										<li><img src="../../assets/img/banner/en.png" alt="en" /><span>English</span></li>
-										<li><img src="../../assets/img/banner/fr.png" alt="fr" /><span>French</span></li>
 									</ul>
 								</div>
 							</div>
 							<div class="currency-wrapper toggle">
-								<button type="button" class="btn text-capitalize dropdown-toggle"><span>€
-										Euro</span></button>
+								<button type="button" class="btn text-capitalize dropdown-toggle"><span>$ US Dollar</span></button>
 								<div id="currency-dropdown" class="currency">
 									<ul>
-										<li><span>€ Euro</span></li>
-										<li><span>£ Pound Sterling</span></li>
 										<li><span>$ US Dollar</span></li>
 									</ul>
 								</div>
@@ -91,8 +87,8 @@
 																<span class="text-left price"> $20.00</span>
 															</div>
 														</td>
-														<td class="text-center close"><a class="close-cart"><i
-																	class="material-icons">close</i></a></td>
+														<!-- <td class="text-center close"><a class="close-cart"><i
+																	class="material-icons">close</i></a></td> -->
 													</tr>
 												</tbody>
 											</table>
