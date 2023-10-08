@@ -12,7 +12,8 @@
                 <!-- Links -->
                 <ul class="navbar-nav m-auto justify-content-center">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link text-uppercase" href="category.html"> Home <span class="sr-only">(current)</span> </a>
+                        <a class="nav-link text-uppercase" href="category.html"> Home <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle text-uppercase" href="category.html">Category</a>
@@ -38,7 +39,7 @@
                                 <div class="col-md-6 col-xl-6 sub-menu mb-0">
                                     <ul class="list-unstyled">
                                         <li>
-                                            <span class="menu-banner"><img src="../../assets/img/banner/menu-banner.jpg"
+                                            <span class="menu-banner"><img src="../../../assets/img/banner/menu-banner.jpg"
                                                     alt="menu-banner" /></span>
                                         </li>
                                     </ul>
@@ -110,7 +111,7 @@
 
                                     <ul class="list-unstyled">
                                         <li>
-                                            <span class="menu-banner"><img src="../../assets/img/banner/menu-banner.jpg"
+                                            <span class="menu-banner"><img src="../../../assets/img/banner/menu-banner.jpg"
                                                     alt="menu-banner" /></span>
                                         </li>
                                     </ul>
@@ -138,8 +139,6 @@
 </template>
 <script>
 export default {
-    name: 'LayoutMenu',
-    components: {
-    }
+    name: 'LayoutMenu'
 }
 </script>

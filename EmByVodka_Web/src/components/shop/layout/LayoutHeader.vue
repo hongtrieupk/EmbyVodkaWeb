@@ -1,5 +1,5 @@
 <template>
-    <header class="header-area header-sticky text-center header-default">
+	<header class="header-area header-sticky text-center header-default">
 		<div class="header-main-sticky">
 			<div class="header-nav">
 				<div class="container">
@@ -17,15 +17,17 @@
 						<div class="header-left float-left d-flex d-lg-flex d-md-block d-xs-block">
 							<div class="language-wrapper toggle">
 								<button type="button" class="btn text-capitalize dropdown-toggle"><img
-										src="../../assets/img/banner/en.png" alt="en" /><span>English</span></button>
+										src="../../../assets/img/banner/en.png" alt="en" /><span>English</span></button>
 								<div id="language-dropdown" class="language">
 									<ul>
-										<li><img src="../../assets/img/banner/en.png" alt="en" /><span>English</span></li>
+										<li><img src="../../../assets/img/banner/en.png" alt="en" /><span>English</span>
+										</li>
 									</ul>
 								</div>
 							</div>
 							<div class="currency-wrapper toggle">
-								<button type="button" class="btn text-capitalize dropdown-toggle"><span>$ US Dollar</span></button>
+								<button type="button" class="btn text-capitalize dropdown-toggle"><span>$ US
+										Dollar</span></button>
 								<div id="currency-dropdown" class="currency">
 									<ul>
 										<li><span>$ US Dollar</span></li>
@@ -39,7 +41,7 @@
 						</div>
 						<div class="header-middle float-lg-left float-md-left float-sm-left float-xs-none">
 							<div class="logo">
-								<a href="index.html"><img src="../../assets/img/logos/logo.png" alt="NatureCircle"></a>
+								<a href="index.html"><img src="../../../assets/img/logos/logo.png" alt="NatureCircle"></a>
 							</div>
 						</div>
 						<div class="header-right d-flex d-xs-flex d-sm-flex justify-content-end float-right">
@@ -70,15 +72,16 @@
 							<div class="cart-wrapper">
 								<button type="button" class="btn">
 									<i class="material-icons">shopping_cart</i>
-									<span class="ttcount">2</span> </button>
+									<span class="ttcount">1</span> </button>
 								<div id="cart-dropdown" class="cart-menu">
 									<ul class="w-100 float-left">
 										<li>
 											<table class="table table-striped">
 												<tbody>
 													<tr>
-														<td class="text-center"><a href="#"><img src="../../assets/img/products/01.jpg"
-																	alt="01" title="01"></a>
+														<td class="text-center"><a href="#"><img
+																	src="../../../assets/img/products/01.jpg" alt="01"
+																	title="01"></a>
 														</td>
 														<td class="text-left product-name"><a href="#">aliquam quaerat
 																voluptatem</a>
@@ -119,17 +122,86 @@
 						</div>
 					</div>
 				</div>
-                <LayoutMenu/>
+				<LayoutMenu />
 			</div>
 		</div>
 	</header>
+
+	<!-- Register modal -->
+	<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title w-100 font-weight-medium text-left">Sign up</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body mx-3">
+					<div class="md-form mb-4">
+						<input type="text" id="RegisterForm-name" class="form-control validate" placeholder="Your name">
+					</div>
+					<div class="md-form mb-4">
+						<input type="email" id="RegisterForm-email" class="form-control validate" placeholder="Your email">
+					</div>
+					<div class="md-form mb-4">
+						<input type="password" id="RegisterForm-pass" class="form-control validate"
+							placeholder="Your password">
+					</div>
+					<div class="checkbox-link d-flex justify-content-between">
+						<div class="left-col">
+							<input id="remember-me" type="checkbox"><label for="remember_me">Remember Me</label>
+						</div>
+						<div class="right-col"><a href="#">Forget Password?</a></div>
+					</div>
+				</div>
+
+				<div class="modal-footer d-flex justify-content-center">
+					<button class="btn btn-primary">Sign up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login modal -->
+	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title w-100 font-weight-medium text-left">Sign in</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body mx-3">
+					<div class="md-form mb-4">
+						<input type="text" id="LoginForm-name" class="form-control validate" placeholder="Your name">
+					</div>
+					<div class="md-form mb-4">
+						<input type="password" id="LoginForm-pass" class="form-control validate"
+							placeholder="Your password">
+					</div>
+					<div class="checkbox-link d-flex justify-content-between">
+						<div class="left-col">
+							<input type="checkbox" id="remember_me"><label for="remember_me">Remember Me</label>
+						</div>
+						<div class="right-col"><a href="#">Forget Password?</a></div>
+					</div>
+				</div>
+
+				<div class="modal-footer d-flex justify-content-center">
+					<button class="btn btn-primary">Sign in</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 <script>
-    import LayoutMenu from './menu.vue'
-    export default {
-        name: 'LayoutHeader',
-        components: {
-            LayoutMenu
-        }
-    }
+import LayoutMenu from './LayoutMenu.vue'
+export default {
+	name: 'LayoutHeader',
+	components: {
+		LayoutMenu
+	}
+}
 </script>
