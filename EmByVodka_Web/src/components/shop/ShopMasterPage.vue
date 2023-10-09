@@ -8,9 +8,9 @@ import '../../assets/legacy/inview'
 import { onMounted } from 'vue'
 import { initializeWindowEvent, initializePage } from '../../assets/legacy/vendor-template'
 
-import ShopLayoutHeader from './layout/ShopLayoutHeader.vue'
-import ShopLayoutCookieAlert from './layout/ShopLayoutCookieAlert.vue'
-import ShopLayoutFooter from './layout/ShopLayoutFooter.vue'
+import ShopLayoutHeader from './layout/ShopLayoutHeader'
+import ShopLayoutCookieAlert from './layout/ShopLayoutCookieAlert'
+import ShopLayoutFooter from './layout/ShopLayoutFooter'
 
 export default {
     name: 'App',

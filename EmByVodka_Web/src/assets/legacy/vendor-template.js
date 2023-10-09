@@ -157,11 +157,40 @@ export function initializePage(){
     /*---------------- End currency ---------------- */
 }
 
+export function owlCarouselBrandLogos() {
+    $('.tt-brand').owlCarousel({
+        items: 6,
+        nav: true,
+        navText: [
+            "<i class='material-icons'>&#xE5CB;</i>",
+            "<i class='material-icons'>&#xE5CC;</i>"
+        ],
+        dots: false,
+        loop: true,
+        autoplayHoverPause: true,
+        autoplay: true,
+        responsive: {
+            1279: {
+                items: 6
+            },
+            1199: {
+                items: 4
+            },
+            544: {
+                items: 3
+            },
+            320: {
+                items: 2
+            }
+        }
+    });
+}
+
 export function owlCarouselHomeSlider() {
     const homeSlider = $('div.slider.slider-for.owl-carousel.owl-loaded.owl-drag');
     if(!homeSlider.length) {
         $('.slider-for').owlCarousel({
-            items: 1, //1 items above 1000px browser width
+            items: 1,
             nav: true,
             navText: [
                 "<i class='material-icons'>&#xE5CB;</i>",
@@ -190,9 +219,8 @@ export function owlCarouselHomeSlider() {
 }
 
 export function owlCarouselHomeSpecialProducts() {
-    /*--- start special js ----*/
     $('.ttspecial-content').owlCarousel({
-        items: 4, //1 items above 1000px browser width
+        items: 4,
         nav: true,
         navText: [
             "<i class='material-icons'>&#xE5CB;</i>",
@@ -221,7 +249,7 @@ export function owlCarouselHomeSpecialProducts() {
 
 export function owlCarouselHomeBlogs() {
     $('.layout3 .smartblog-content').owlCarousel({
-        items: 1, //1 items above 1000px browser width
+        items: 1,
         nav: true,
         navText: [
             "<i class='material-icons'>&#xE5CB;</i>",
@@ -627,32 +655,7 @@ export function initializeShoppingTheme() {
 
 
     /*--- start blog js ----*/
-    $('.tt-brand').owlCarousel({
-        items: 6, //1 items above 1000px browser width
-        nav: true,
-        navText: [
-            "<i class='material-icons'>&#xE5CB;</i>",
-            "<i class='material-icons'>&#xE5CC;</i>"
-        ],
-        dots: false,
-        loop: true,
-        autoplayHoverPause: true,
-        autoplay: true,
-        responsive: {
-            1279: {
-                items: 6
-            },
-            1199: {
-                items: 4
-            },
-            544: {
-                items: 3
-            },
-            320: {
-                items: 2
-            }
-        }
-    });
+    
     $('.product_view .small-image-list .nav-add').owlCarousel({
         items: 3, //1 items above 1000px browser width
         nav: true,

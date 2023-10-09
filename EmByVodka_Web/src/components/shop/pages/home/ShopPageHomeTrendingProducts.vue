@@ -2,14 +2,291 @@
 import { onMounted } from 'vue'
 import { initTabsForTrendingProducts } from '../../../../assets/legacy/vendor-template'
 
+import ShopProductLayout from '../../product/ShopProductLayout'
+
 export default {
     name: 'ShopPageHomeTrendingProducts',
+    components: { ShopProductLayout },
     setup() {
         onMounted(() => {
             initTabsForTrendingProducts();
-        })
+        });
+        const featuredProducts = fetchFeaturedProducts();
+        const latestProducts = fetchLatestProducts();
+        const bestSellerProducts = fetchBestSellerProducts();
+        return {
+            featuredProducts,
+            latestProducts,
+            bestSellerProducts
+        }
     }
+}
 
+function fetchFeaturedProducts() {
+    return [
+        {
+            id: 5,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 5
+        },
+        {
+            id: 6,
+            name: 'voluptas sit aspernatur',
+            imageUrls: [
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/07.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 1,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 2,
+            name: 'aspetur autodit autfugit',
+            imageUrls: [
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 3,
+            name: 'magni dolores eosquies',
+            imageUrls: [
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 4,
+            name: 'voluptas nulla pariatur',
+            imageUrls: [
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        }
+    ];
+}
+
+function fetchLatestProducts() {
+    return [
+        {
+            id: 3,
+            name: 'magni dolores eosquies',
+            imageUrls: [
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 4,
+            name: 'voluptas nulla pariatur',
+            imageUrls: [
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 5,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 5
+        },
+        {
+            id: 6,
+            name: 'voluptas sit aspernatur',
+            imageUrls: [
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/07.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 1,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 2,
+            name: 'aspetur autodit autfugit',
+            imageUrls: [
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        }
+    ];
+}
+
+function fetchBestSellerProducts() {
+    return [
+        {
+            id: 1,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 2,
+            name: 'aspetur autodit autfugit',
+            imageUrls: [
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 3,
+            name: 'magni dolores eosquies',
+            imageUrls: [
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 3
+        },
+        {
+            id: 4,
+            name: 'voluptas nulla pariatur',
+            imageUrls: [
+                require('../../../../assets/img/products/04.jpg'),
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/01.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        },
+        {
+            id: 5,
+            name: 'aliquam quat voluptatem',
+            imageUrls: [
+                require('../../../../assets/img/products/05.jpg'),
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 5
+        },
+        {
+            id: 6,
+            name: 'voluptas sit aspernatur',
+            imageUrls: [
+                require('../../../../assets/img/products/06.jpg'),
+                require('../../../../assets/img/products/07.jpg'),
+                require('../../../../assets/img/products/02.jpg'),
+                require('../../../../assets/img/products/03.jpg'),
+                require('../../../../assets/img/products/04.jpg')
+            ],
+            price: 150,
+            salePrice: 100,
+            rating: 4
+        }
+    ];
 }
 </script>
 
@@ -38,751 +315,15 @@ export default {
                         aria-labelledby="featured-tab">
                         <section id="ttfeatured" class="ttfeatured-products">
                             <div class="ttfeatured-content products grid owl-carousel" id="owl1">
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/01.jpg" alt="01" />
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quaerat
-                                                        voluptatem</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal" disabled="disabled"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02" />
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03"
-                                                    class="second_image img-responsive" /> </a>
-                                            <div class="flags">
-                                                <div class="sale">sale</div>
-                                                <div class="new">new</div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aspetur autodit
-                                                        autfugit</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/04.jpg" alt="04"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">magni dolores
-                                                        eosquies</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/04.jpg" alt="04" />
-                                                <img src="../../../../assets/img/products/05.jpg" alt="05"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas nulla
-                                                        pariatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/05.jpg" alt="05" />
-                                                <img src="../../../../assets/img/products/06.jpg" alt="06"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quat
-                                                        voluptatem</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/06.jpg" alt="06" />
-                                                <img src="../../../../assets/img/products/07.jpg" alt="07"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas sit
-                                                        aspernatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/07.jpg" alt="07" />
-                                                <img src="../../../../assets/img/products/08.jpg" alt="08"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">similique suntin
-                                                        culpaqui</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal" disabled="disabled"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/08.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/09.jpg" alt="09"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">suscipit laboriosam
-                                                        nisi</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ShopProductLayout v-for="product in featuredProducts" :key="product.id"
+                                    :product="product" />
                             </div>
                         </section>
                     </div>
                     <div class="tab-pane float-left w-100" id="ttnew-main" role="tabpanel" aria-labelledby="new-tab">
                         <section id="ttnew" class="ttnew-products">
                             <div class="ttnew-content products grid owl-carousel" id="owl2">
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/01.jpg" alt="01" />
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quaerat
-                                                        voluptatem</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal" disabled="disabled"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02" />
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aspetur autodit
-                                                        autfugit</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/04.jpg" alt="04"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">magni dolores
-                                                        eosquies</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/04.jpg" alt="04" />
-                                                <img src="../../../../assets/img/products/05.jpg" alt="05"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas nulla
-                                                        pariatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/05.jpg" alt="05" />
-                                                <img src="../../../../assets/img/products/06.jpg" alt="06"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quat
-                                                        voluptatem</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/06.jpg" alt="06" />
-                                                <img src="../../../../assets/img/products/07.jpg" alt="07"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas sit
-                                                        aspernatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/07.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/08.jpg" alt="08"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a href="#">similique
-                                                        suntin culpaqui</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal" disabled="disabled"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/08.jpg" alt="08" />
-                                                <img src="../../../../assets/img/products/09.jpg" alt="09"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">suscipit laboriosam
-                                                        nisi</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-target="#cart-pop" data-toggle="modal"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ShopProductLayout v-for="product in latestProducts" :key="product.id" :product="product" />
                             </div>
                         </section>
                     </div>
@@ -790,373 +331,8 @@ export default {
                         aria-labelledby="bestseller-tab">
                         <section id="ttbestseller" class="ttbestseller-products">
                             <div class="ttbestseller-content products grid owl-carousel" id="owl3">
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/01.jpg" alt="01" />
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quaerat
-                                                        voluptatem</a></h4>
-                                            </div>
-
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"
-                                                        disabled="disabled"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/02.jpg" alt="02" />
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aspetur autodit
-                                                        autfugit</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/03.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/04.jpg" alt="04"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">magni dolores
-                                                        eosquies</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/04.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/05.jpg" alt="05"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas nulla
-                                                        pariatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/05.jpg" alt="03" />
-                                                <img src="../../../../assets/img/products/06.jpg" alt="06"
-                                                    class="second_image img-responsive" /> </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">aliquam quat
-                                                        voluptatem</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/06.jpg" alt="03" />
-                                            </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">voluptas sit
-                                                        aspernatur</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/07.jpg" alt="03" />
-                                            </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">similique suntin
-                                                        culpaqui</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view" disabled="disabled">
-                                                        <i class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-layouts">
-                                    <div class="product-thumb">
-                                        <div class="image vertical_scrolling_bottom_to_top">
-                                            <a href="product-details.html">
-                                                <img src="../../../../assets/img/products/08.jpg" alt="03" />
-                                            </a>
-                                        </div>
-                                        <div class="thumb-description">
-                                            <div class="caption">
-                                                <h4 class="product-title text-capitalize"><a
-                                                        href="product-details.html">suscipit laboriosam
-                                                        nisi</a></h4>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="product-ratings d-inline-block align-middle">
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                                </div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="regular-price">$100.00</div>
-                                                <div class="old-price">$150.00</div>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <div class="button-group text-center">
-                                                    <button type="button" class="btn btn-primary btn-cart"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">shopping_cart</i><span>Add
-                                                            to cart</span></button>
-                                                    <a href="wishlist.html" class="btn btn-primary btn-wishlist"><i
-                                                            class="material-icons">favorite</i><span>wishlist</span></a>
-                                                    <button type="button" class="btn btn-primary btn-compare"><i
-                                                            class="material-icons">equalizer</i><span>Compare</span></button>
-                                                    <button type="button" class="btn btn-primary btn-quickview"
-                                                        data-toggle="modal" data-target="#product_view"><i
-                                                            class="material-icons">visibility</i><span>Quick
-                                                            View</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ShopProductLayout v-for="product in bestSellerProducts" :key="product.id"
+                                    :product="product" />
                             </div>
                         </section>
                     </div>

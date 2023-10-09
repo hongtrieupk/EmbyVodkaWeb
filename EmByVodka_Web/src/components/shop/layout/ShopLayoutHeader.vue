@@ -1,5 +1,5 @@
 <script>
-import ShopLayoutMenu from './ShopLayoutMenu.vue'
+import ShopLayoutMenu from './ShopLayoutMenu'
 export default {
 	name: 'ShopLayoutHeader',
 	components: {
