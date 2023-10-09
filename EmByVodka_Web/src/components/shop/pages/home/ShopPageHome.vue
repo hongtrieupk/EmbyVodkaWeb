@@ -1,8 +1,8 @@
 <script>
-import ShopPageHomeSlider from './ShopPageHomeSlider.vue'
-import ShopPageHomeAbout from './ShopPageHomeAbout.vue'
-import ShopPageHomeTrendingProducts from './ShopPageHomeTrendingProducts.vue'
-import ShopPageHomeSaleInfo from './ShopPageHomeSaleInfo.vue'
+import ShopPageHomeSlider from './ShopPageHomeSlider'
+import ShopPageHomeAbout from './ShopPageHomeAbout'
+import ShopPageHomeTrendingProducts from './ShopPageHomeTrendingProducts'
+import ShopPageHomeSaleInfo from './ShopPageHomeSaleInfo'
 import ShopPageHomeSpecialProducts from './ShopPageHomeSpecialProducts'
 import ShopPageHomeBlogs from './ShopPageHomeBlogs'
 

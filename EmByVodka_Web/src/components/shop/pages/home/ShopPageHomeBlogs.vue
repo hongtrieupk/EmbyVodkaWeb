@@ -5,52 +5,56 @@ import { owlCarouselHomeBlogs } from '../../../../assets/legacy/vendor-template'
 export default {
     name: 'ShopPageHomeBlogs',
     setup() {
-        const blogWrappers = ref([
-            {
-                blogItems: [
-                    {
-                        imgUrl: require('../../../../assets/img/banner/blog-01.jpg'),
-                        link: '#',
-                        title: 'Share the Love',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                    },
-                    {
-                        imgUrl: require('../../../../assets/img/banner/blog-02.jpg'),
-                        link: '#',
-                        title: 'Upon of seasons earth',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                    },
-                    {
-                        imgUrl: require('../../../../assets/img/banner/blog-03.jpg'),
-                        link: '#',
-                        title: 'From Now we are certified web',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                    }
-                ]
-            },
-            {
-                blogItems: [
-                    {
-                        imgUrl: require('../../../../assets/img/banner/blog-02.jpg'),
-                        link: '#',
-                        title: 'Upon of seasons earth',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                    },
-                    {
-                        imgUrl: require('../../../../assets/img/banner/blog-03.jpg'),
-                        link: '#',
-                        title: 'From Now we are certified web',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-                    }
-                ]
-            }
-        ]);
+        const blogWrappers = ref(fetchBlogs());
         onMounted(() => {
             owlCarouselHomeBlogs();
         })
 
         return { blogWrappers }
     }
+}
+
+function fetchBlogs() {
+    return [
+        {
+            blogItems: [
+                {
+                    imgUrl: require('../../../../assets/img/banner/blog-01.jpg'),
+                    link: '#',
+                    title: 'Share the Love',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                },
+                {
+                    imgUrl: require('../../../../assets/img/banner/blog-02.jpg'),
+                    link: '#',
+                    title: 'Upon of seasons earth',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                },
+                {
+                    imgUrl: require('../../../../assets/img/banner/blog-03.jpg'),
+                    link: '#',
+                    title: 'From Now we are certified web',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                }
+            ]
+        },
+        {
+            blogItems: [
+                {
+                    imgUrl: require('../../../../assets/img/banner/blog-02.jpg'),
+                    link: '#',
+                    title: 'Upon of seasons earth',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                },
+                {
+                    imgUrl: require('../../../../assets/img/banner/blog-03.jpg'),
+                    link: '#',
+                    title: 'From Now we are certified web',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                }
+            ]
+        }
+    ];
 }
 </script>
 
