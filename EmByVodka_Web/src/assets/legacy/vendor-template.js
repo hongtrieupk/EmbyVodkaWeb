@@ -1,10 +1,6 @@
 
 /* eslint-disable */
-export function initializeWindowEvent() {
-    $(window).on("load", function () {
-        $(".ttloading-bg").fadeOut("slow");
-    })
-    
+export function initializeWindowEvent() {    
     $(window).on('resize', function () {
         contentwidth();
         responsivemenu();
@@ -160,6 +156,38 @@ export function initializePage(){
     });
     /*---------------- End currency ---------------- */
 }
+
+export function owlCarouselHomeSlider() {
+    const homeSlider = $('div.slider.slider-for.owl-carousel.owl-loaded.owl-drag');
+    if(!homeSlider.length) {
+        $('.slider-for').owlCarousel({
+            items: 1, //1 items above 1000px browser width
+            nav: true,
+            navText: [
+                "<i class='material-icons'>&#xE5CB;</i>",
+                "<i class='material-icons'>&#xE5CC;</i>"
+            ],
+            dots: true,
+            loop: true,
+            responsive: {
+                1279: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                },
+                481: {
+                    items: 1
+                },
+                100: {
+                    items: 1
+                }
+            }
+        });
+    } else {
+        homeSlider.removeClass('owl-hidden');
+    }
+}
 export function initializeShoppingTheme() {
     $(".code").on('click', function () {
         $(".code-content").toggle("slow", function () {
@@ -250,32 +278,6 @@ export function initializeShoppingTheme() {
             $('.nav-add-compact').carousel('prev')
         }
 
-    });
-    
-    /*--- start slider js ----*/
-    $('.slider-for').owlCarousel({
-        items: 1, //1 items above 1000px browser width
-        nav: true,
-        navText: [
-            "<i class='material-icons'>&#xE5CB;</i>",
-            "<i class='material-icons'>&#xE5CC;</i>"
-        ],
-        dots: true,
-        loop: true,
-        responsive: {
-            1279: {
-                items: 1
-            },
-            992: {
-                items: 1
-            },
-            481: {
-                items: 1
-            },
-            100: {
-                items: 1
-            }
-        }
     });
 
     $('#ttcmsservice .ttserviceblock').owlCarousel({
