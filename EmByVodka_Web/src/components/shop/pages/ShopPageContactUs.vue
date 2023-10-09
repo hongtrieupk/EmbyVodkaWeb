@@ -1,3 +1,8 @@
+<script>
+export default {
+    name: 'ShopPageContactUs'
+}
+</script>
 <template>
     <div class="main-content w-100 float-left">
 		<div class="container">
@@ -79,9 +84,3 @@
 		</div>
 	</div>
 </template>
-
-<script>
-export default {
-    name: 'ShopPageContactUs'
-}
-</script>

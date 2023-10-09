@@ -1,3 +1,9 @@
+<script>
+export default {
+    name: 'ShopPageHome'
+}
+</script>
+
 <template>
     <main>
         <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -1990,9 +1996,3 @@
         </div>
     </main>
 </template>
-
-<script>
-export default {
-    name: 'ShopPageHome'
-}
-</script>

@@ -1,3 +1,13 @@
+<script>
+import ShopLayoutMenu from './ShopLayoutMenu.vue'
+export default {
+	name: 'ShopLayoutHeader',
+	components: {
+		ShopLayoutMenu
+	}
+}
+</script>
+
 <template>
 	<header class="header-area header-sticky text-center header-default">
 		<div class="header-main-sticky">
@@ -196,12 +206,3 @@
 		</div>
 	</div>
 </template>
-<script>
-import ShopLayoutMenu from './ShopLayoutMenu.vue'
-export default {
-	name: 'ShopLayoutHeader',
-	components: {
-		ShopLayoutMenu
-	}
-}
-</script>

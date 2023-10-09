@@ -1,3 +1,9 @@
+<script>
+export default {
+    name: 'ShopLayoutMenu'
+}
+</script>
+
 <template>
     <div class="menu">
         <!-- Navbar -->
@@ -142,8 +148,3 @@
         </nav>
     </div>
 </template>
-<script>
-export default {
-    name: 'ShopLayoutMenu'
-}
-</script>

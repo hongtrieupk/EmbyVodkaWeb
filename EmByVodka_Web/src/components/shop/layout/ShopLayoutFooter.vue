@@ -1,3 +1,9 @@
+<script>
+export default {
+    name: 'ShopLayoutFooter'
+}
+</script>
+
 <template>
     <footer class="page-footer font-small footer1">
         <div class="container text-center text-md-left">
@@ -137,9 +143,3 @@
 
     </footer>
 </template>
-
-<script>
-export default {
-    name: 'ShopLayoutFooter'
-}
-</script>

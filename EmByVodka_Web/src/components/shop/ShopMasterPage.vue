@@ -1,3 +1,32 @@
+<script>
+import 'owl.carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css'
+import 'theia-sticky-sidebar'
+import 'masonry-layout/dist/masonry.pkgd'
+import '../../assets/legacy/inview'
+
+import { onMounted } from 'vue'
+import { initializeWindowEvent, initializePage } from '../../assets/legacy/vendor-template'
+
+import ShopLayoutHeader from './layout/ShopLayoutHeader.vue'
+import ShopLayoutCookieAlert from './layout/ShopLayoutCookieAlert.vue'
+import ShopLayoutFooter from './layout/ShopLayoutFooter.vue'
+
+export default {
+    name: 'App',
+    components: {
+        ShopLayoutHeader,
+        ShopLayoutCookieAlert,
+        ShopLayoutFooter
+    },
+    setup() {
+        onMounted(() => {
+            initializeWindowEvent();
+            initializePage();
+        })
+    }
+}
+</script>
 
 <template>
     <ShopLayoutHeader />
@@ -194,38 +223,3 @@
         </div>
     </div>
 </template>
-
-<script>
-import 'owl.carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'theia-sticky-sidebar'
-import 'masonry-layout/dist/masonry.pkgd'
-import '../../assets/legacy/inview'
-
-import { onMounted, onUpdated  } from 'vue'
-import { initializeShoppingTheme } from '../../assets/legacy/vendor-template'
-
-import ShopLayoutHeader from './layout/ShopLayoutHeader.vue'
-import ShopLayoutCookieAlert from './layout/ShopLayoutCookieAlert.vue'
-import ShopLayoutFooter from './layout/ShopLayoutFooter.vue'
-
-export default {
-    name: 'App',
-    components: {
-        ShopLayoutHeader,
-        ShopLayoutCookieAlert,
-        ShopLayoutFooter
-    },
-    setup() {
-        onMounted(() => {
-            console.log('ffffff');
-            initializeShoppingTheme();
-        })
-        
-        onUpdated(() => {
-            console.log('ffffff 1111');
-            initializeShoppingTheme();
-        })
-    }
-}
-</script>
