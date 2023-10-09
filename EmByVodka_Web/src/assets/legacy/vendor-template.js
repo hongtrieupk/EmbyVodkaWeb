@@ -189,6 +189,65 @@ export function owlCarouselHomeSlider() {
     }
 }
 
+export function owlCarouselHomeSpecialProducts() {
+    /*--- start special js ----*/
+    $('.ttspecial-content').owlCarousel({
+        items: 4, //1 items above 1000px browser width
+        nav: true,
+        navText: [
+            "<i class='material-icons'>&#xE5CB;</i>",
+            "<i class='material-icons'>&#xE5CC;</i>"
+        ],
+        dots: false,
+        loop: true,
+        autoplayHoverPause: true,
+        autoplay: true,
+        responsive: {
+            1279: {
+                items: 4
+            },
+            992: {
+                items: 3
+            },
+            768: {
+                items: 3
+            },
+            320: {
+                items: 2
+            }
+        }
+    });
+}
+
+export function owlCarouselHomeBlogs() {
+    $('.layout3 .smartblog-content').owlCarousel({
+        items: 1, //1 items above 1000px browser width
+        nav: true,
+        navText: [
+            "<i class='material-icons'>&#xE5CB;</i>",
+            "<i class='material-icons'>&#xE5CC;</i>"
+        ],
+        dots: false,
+        autoplayHoverPause: true,
+        loop: false,
+        autoplay: true,
+        responsive: {
+            1279: {
+                items: 1
+            },
+            992: {
+                items: 3
+            },
+            544: {
+                items: 2
+            },
+            320: {
+                items: 1
+            }
+        }
+    });
+}
+
 export function initTabsForTrendingProducts(){
     initialize_owl($('#owl1'));
 
@@ -483,33 +542,7 @@ export function initializeShoppingTheme() {
 
 
 
-    /*--- start special js ----*/
-    $('.ttspecial-content').owlCarousel({
-        items: 4, //1 items above 1000px browser width
-        nav: true,
-        navText: [
-            "<i class='material-icons'>&#xE5CB;</i>",
-            "<i class='material-icons'>&#xE5CC;</i>"
-        ],
-        dots: false,
-        loop: true,
-        autoplayHoverPause: true,
-        autoplay: true,
-        responsive: {
-            1279: {
-                items: 4
-            },
-            992: {
-                items: 3
-            },
-            768: {
-                items: 3
-            },
-            320: {
-                items: 2
-            }
-        }
-    });
+    
     /*--- start special js ----*/
     $('#sidebar-product .sale .products').owlCarousel({
         items: 1, //1 items above 1000px browser width
@@ -591,32 +624,6 @@ export function initializeShoppingTheme() {
     });
 
 
-    $('.layout3 .smartblog-content').owlCarousel({
-        items: 1, //1 items above 1000px browser width
-        nav: true,
-        navText: [
-            "<i class='material-icons'>&#xE5CB;</i>",
-            "<i class='material-icons'>&#xE5CC;</i>"
-        ],
-        dots: false,
-        autoplayHoverPause: true,
-        loop: false,
-        autoplay: true,
-        responsive: {
-            1279: {
-                items: 1
-            },
-            992: {
-                items: 3
-            },
-            544: {
-                items: 2
-            },
-            320: {
-                items: 1
-            }
-        }
-    });
 
 
     /*--- start blog js ----*/
