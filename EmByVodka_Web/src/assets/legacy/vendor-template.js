@@ -188,6 +188,29 @@ export function owlCarouselHomeSlider() {
         homeSlider.removeClass('owl-hidden');
     }
 }
+
+export function initTabsForTrendingProducts(){
+    initialize_owl($('#owl1'));
+
+    $('a[href="#ttfeatured-main"]').on('shown.bs.tab', function () {
+        initialize_owl($('#owl1'));
+    }).on('hide.bs.tab', function () {
+        destroy_owl($('#owl1'));
+    });
+
+    $('a[href="#ttnew-main"]').on('shown.bs.tab', function () {
+        initialize_owl($('#owl2'));
+    }).on('hide.bs.tab', function () {
+        destroy_owl($('#owl2'));
+    });
+
+    $('a[href="#ttbestseller-main"]').on('shown.bs.tab', function () {
+        initialize_owl($('#owl3'));
+    }).on('hide.bs.tab', function () {
+        destroy_owl($('#owl3'));
+    });
+}
+
 export function initializeShoppingTheme() {
     $(".code").on('click', function () {
         $(".code-content").toggle("slow", function () {
@@ -718,26 +741,6 @@ export function initializeShoppingTheme() {
 
         $thisParent.find('.product-large-image .tab-pane').removeClass('active show');
         $thisParent.find('.product-large-image ' + $href).addClass('active show');
-    });
-
-    initialize_owl($('#owl1'));
-
-    $('a[href="#ttfeatured-main"]').on('shown.bs.tab', function () {
-        initialize_owl($('#owl1'));
-    }).on('hide.bs.tab', function () {
-        destroy_owl($('#owl1'));
-    });
-
-    $('a[href="#ttnew-main"]').on('shown.bs.tab', function () {
-        initialize_owl($('#owl2'));
-    }).on('hide.bs.tab', function () {
-        destroy_owl($('#owl2'));
-    });
-
-    $('a[href="#ttbestseller-main"]').on('shown.bs.tab', function () {
-        initialize_owl($('#owl3'));
-    }).on('hide.bs.tab', function () {
-        destroy_owl($('#owl3'));
     });
 
     function autocomplete(inp, arr) {
