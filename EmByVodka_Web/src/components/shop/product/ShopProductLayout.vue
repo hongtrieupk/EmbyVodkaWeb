@@ -1,17 +1,11 @@
 <script>
+import productModel from '../../../model/product-model'
 export default {
     name: 'ShopProductLayout',
     props: {
-        product: Object
+        product: productModel
     },
-    setup(props) {
-        const mainImgUrl = props.product.imageUrls.length > 0 ? props.product.imageUrls[0] : '';
-        const secondImgUrl = props.product.imageUrls.length > 1 ? props.product.imageUrls[2] : '';
-
-        return {
-            mainImgUrl,
-            secondImgUrl
-        };
+    setup() {
     }
 }
 </script>
@@ -20,15 +14,15 @@ export default {
     <div class="product-layouts">
         <div class="product-thumb">
             <div class="image vertical_scrolling_bottom_to_top">
-                <router-link to="/products">
-                    <img :src="mainImgUrl" alt="01" />
-                    <img :src="secondImgUrl" alt="02" class="second_image img-responsive" />
+                <router-link :to="'/product-details/' + product.id">
+                    <img :src="product.mainImgUrl" alt="01" />
+                    <img :src="product.secondImgUrl" alt="02" class="second_image img-responsive" />
                 </router-link>
             </div>
             <div class="thumb-description">
                 <div class="caption">
                     <h4 class="product-title text-capitalize">
-                        <router-link to="/products">{{ product.name }}</router-link>
+                        <router-link :to="'/product-details/' + product.id">{{ product.name }}</router-link>
                     </h4>
                 </div>
                 <div class="rating">

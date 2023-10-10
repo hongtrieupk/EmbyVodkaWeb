@@ -1,7 +1,7 @@
 <script>
 import { onMounted } from 'vue'
 import { owlCarouselHomeSpecialProducts } from '../../../../assets/legacy/vendor-template'
-
+import { fetchSpecialProducts } from '../../../../services/product-service'
 import ShopProductLayout from '../../product/ShopProductLayout'
 
 export default {
@@ -10,104 +10,16 @@ export default {
         ShopProductLayout
     },
     setup() {
-        const specialProducts = fetchSpecialProducts();
         onMounted(() => {
             owlCarouselHomeSpecialProducts();
         })
 
         return {
-            specialProducts
+            specialProducts: fetchSpecialProducts()
         }
     }
 }
-function fetchSpecialProducts() {
-    return [
-        {
-            id: 1,
-            name: 'aliquam quat voluptatem',
-            imageUrls: [
-                require('../../../../assets/img/products/01.jpg'),
-                require('../../../../assets/img/products/02.jpg'),
-                require('../../../../assets/img/products/03.jpg'),
-                require('../../../../assets/img/products/04.jpg'),
-                require('../../../../assets/img/products/05.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 3
-        },
-        {
-            id: 2,
-            name: 'aspetur autodit autfugit',
-            imageUrls: [
-                require('../../../../assets/img/products/02.jpg'),
-                require('../../../../assets/img/products/03.jpg'),
-                require('../../../../assets/img/products/04.jpg'),
-                require('../../../../assets/img/products/05.jpg'),
-                require('../../../../assets/img/products/01.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 4
-        },
-        {
-            id: 3,
-            name: 'magni dolores eosquies',
-            imageUrls: [
-                require('../../../../assets/img/products/03.jpg'),
-                require('../../../../assets/img/products/04.jpg'),
-                require('../../../../assets/img/products/05.jpg'),
-                require('../../../../assets/img/products/01.jpg'),
-                require('../../../../assets/img/products/02.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 3
-        },
-        {
-            id: 4,
-            name: 'voluptas nulla pariatur',
-            imageUrls: [
-                require('../../../../assets/img/products/04.jpg'),
-                require('../../../../assets/img/products/05.jpg'),
-                require('../../../../assets/img/products/01.jpg'),
-                require('../../../../assets/img/products/02.jpg'),
-                require('../../../../assets/img/products/03.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 4
-        },
-        {
-            id: 5,
-            name: 'aliquam quat voluptatem',
-            imageUrls: [
-                require('../../../../assets/img/products/05.jpg'),
-                require('../../../../assets/img/products/06.jpg'),
-                require('../../../../assets/img/products/02.jpg'),
-                require('../../../../assets/img/products/03.jpg'),
-                require('../../../../assets/img/products/04.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 5
-        },
-        {
-            id: 6,
-            name: 'voluptas sit aspernatur',
-            imageUrls: [
-                require('../../../../assets/img/products/06.jpg'),
-                require('../../../../assets/img/products/07.jpg'),
-                require('../../../../assets/img/products/02.jpg'),
-                require('../../../../assets/img/products/03.jpg'),
-                require('../../../../assets/img/products/04.jpg')
-            ],
-            price: 150,
-            salePrice: 100,
-            rating: 4
-        }
-    ];
-}
+
 </script>
 
 <template>

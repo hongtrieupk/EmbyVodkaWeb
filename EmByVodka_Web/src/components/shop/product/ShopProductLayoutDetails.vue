@@ -1,18 +1,12 @@
 <script>
+import productModel from '../../../model/product-model'
+
 export default {
     name: 'ShopProductLayoutDetails',
     props: {
-        product: Object
+        product: productModel
     },
-    setup(props) {
-        // TODO: move this logic to product class/object
-        const mainImgUrl = props.product.imageUrls.length > 0 ? props.product.imageUrls[0] : '';
-        const secondImgUrl = props.product.imageUrls.length > 1 ? props.product.imageUrls[2] : '';
-
-        return {
-            mainImgUrl,
-            secondImgUrl
-        };
+    setup() {
     }
 }
 </script>
@@ -21,17 +15,17 @@ export default {
     <div class="product-layouts">
         <div class="product-thumb row">
             <div class="image zoom col-xs-12 col-sm-5 col-md-4">
-                <router-link to="/products">
+                <router-link :to="'/product-details/' + product.id">
                     <a class="d-block position-relative">
-                        <img :src="mainImgUrl" alt="01" />
-                        <img :src="secondImgUrl" alt="02" class="second_image img-responsive" />
+                        <img :src="product.mainImgUrl" alt="01" />
+                        <img :src="product.secondImgUrl" alt="02" class="second_image img-responsive" />
                     </a>
                 </router-link>
             </div>
             <div class="thumb-description col-xs-12 col-sm-7 col-md-8 position-static text-left">
                 <div class="caption">
                     <h4 class="product-title text-capitalize">
-                        <router-link to="/products">{{ product.name }}</router-link>
+                        <router-link :to="'/product-details/' + product.id">{{ product.name }}</router-link>
                     </h4>
                 </div>
                 <div class="rating">
