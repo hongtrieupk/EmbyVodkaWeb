@@ -23,7 +23,9 @@ export default {
                         </router-link>
                     </li>
                     <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase" href="category.html">Category</a>
+                        <router-link to="/products">
+                            <a class="nav-link dropdown-toggle text-uppercase">Category</a>
+                        </router-link>
                         <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-3 px-3">
                             <div class="row">
                                 <div class="col-md-12 col-xl-6 sub-menu mb-xl-0 mb-4">
@@ -31,15 +33,19 @@ export default {
                                     <ul class="list-unstyled">
                                         <li>
                                             <a class="menu-item pl-0" href="filter-toggle.html">
-                                                Category 1 </a>
+                                                T-Shirt </a>
                                         </li>
                                         <li>
                                             <a class="menu-item pl-0" href="off-canvas-left.html">
-                                                Category 2 </a>
+                                                Dress </a>
+                                        </li>
+                                        <li>
+                                            <a class="menu-item pl-0" href="off-canvas-left.html">
+                                                Jean </a>
                                         </li>
                                         <li>
                                             <a class="menu-item pl-0" href="off-canvas-right.html">
-                                                Category 3 </a>
+                                                Coats & Jackets </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -53,9 +59,6 @@ export default {
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="https://www.facebook.com/vodka.style.87">Blog</a>
                     </li>
                     <li class="nav-item dropdown">
                         <router-link to="/contact-us">

@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main class="layout3">
         <ShopPageHomeSlider />
         <div class="main-content">
             <ShopPageHomeAbout />
