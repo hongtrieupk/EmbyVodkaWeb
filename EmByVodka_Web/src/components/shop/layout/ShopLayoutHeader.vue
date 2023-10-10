@@ -17,7 +17,7 @@ export default {
 						<div class="ttheader-service">Wants to explore Upcoming Deals on Weekends?</div>
 					</div>
 					<div class="nav-right float-right d-flex">
-						<div class="ttheader-mail"><a href="mailto:demo.store@gmail.com">embyvodka@gmail.com</a></div>
+						<div class="ttheader-mail"><a href="mailto:embyvodka@gmail.com">embyvodka@gmail.com</a></div>
 					</div>
 				</div>
 			</div>
@@ -51,7 +51,8 @@ export default {
 						</div>
 						<div class="header-middle float-lg-left float-md-left float-sm-left float-xs-none">
 							<div class="logo">
-								<a href="index.html"><img src="../../../assets/img/logos/logo.png" alt="NatureCircle"></a>
+								<router-link to="/"><a><img src="../../../assets/img/logos/logo.png"
+											alt="NatureCircle"></a></router-link>
 							</div>
 						</div>
 						<div class="header-right d-flex d-xs-flex d-sm-flex justify-content-end float-right">
@@ -71,10 +72,10 @@ export default {
 									<i class="material-icons">perm_identity</i> </button>
 								<div id="user-dropdown" class="user-menu">
 									<ul>
-										<li><a href="my-account.html" class="text-capitalize">my account</a></li>
-										<li><a href="#" class="modal-view button" data-toggle="modal"
+										<li><a class="text-capitalize">my account</a></li>
+										<li><a class="modal-view button" data-toggle="modal"
 												data-target="#modalRegisterForm">Register</a></li>
-										<li><a href="#" class="modal-view button" data-toggle="modal"
+										<li><a class="modal-view button" data-toggle="modal"
 												data-target="#modalLoginForm">login</a></li>
 									</ul>
 								</div>
@@ -117,11 +118,11 @@ export default {
 											</table>
 										</li>
 										<li class="buttons w-100 float-left">
-											<form action="cart_page.html">
+											<form>
 												<input class="btn pull-left mt_10 btn-primary btn-rounded w-100"
 													value="View cart" type="submit">
 											</form>
-											<form action="checkout_page.html">
+											<form>
 												<input class="btn pull-right mt_10 btn-primary btn-rounded w-100"
 													value="Checkout" type="submit">
 											</form>
@@ -162,7 +163,7 @@ export default {
 						<div class="left-col">
 							<input id="remember-me" type="checkbox"><label for="remember_me">Remember Me</label>
 						</div>
-						<div class="right-col"><a href="#">Forget Password?</a></div>
+						<div class="right-col"><a>Forget Password?</a></div>
 					</div>
 				</div>
 
@@ -195,7 +196,7 @@ export default {
 						<div class="left-col">
 							<input type="checkbox" id="remember_me"><label for="remember_me">Remember Me</label>
 						</div>
-						<div class="right-col"><a href="#">Forget Password?</a></div>
+						<div class="right-col"><a>Forget Password?</a></div>
 					</div>
 				</div>
 

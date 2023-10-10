@@ -59,19 +59,19 @@ export default {
                     <div id="size" class="sidebar-widget-option-wrapper collapse show">
                         <div class="size-inner">
                             <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-1">
+                                <input type="checkbox" id="size-1" checked>
                                 <label for="size-1">L <span>(4)</span></label>
                             </div>
                             <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-2">
+                                <input type="checkbox" id="size-2" checked>
                                 <label for="size-2">XS <span>(3)</span></label>
                             </div>
                             <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-3">
+                                <input type="checkbox" id="size-3" checked>
                                 <label for="size-3">S <span>(3)</span></label>
                             </div>
                             <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-4">
+                                <input type="checkbox" id="size-4" checked>
                                 <label for="size-4">Xl <span>(3)</span></label>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ export default {
         </div>
         <div class="sidebar-left-banner left-sidebar w-100 float-left">
             <div class="ttleftbanner">
-                <a href="#">
+                <a>
                     <img src="../../../../assets/img/banner/left-banner.jpg" alt="left-banner" />
                 </a>
             </div>

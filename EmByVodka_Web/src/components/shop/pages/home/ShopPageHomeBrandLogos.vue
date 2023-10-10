@@ -17,7 +17,7 @@ export default {
         <div class="container">
             <div class="tt-brand owl-carousel">
                 <div class="item" v-for="i in 7" :key="i">
-                    <a href="#"><img :src="require('../../../../assets/img/logos/brand-logo-0' + i + '.png')"></a>
+                    <a><img :src="require('../../../../assets/img/logos/brand-logo-0' + i + '.png')"></a>
                 </div>
             </div>
         </div>

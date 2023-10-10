@@ -138,13 +138,13 @@ export default {
                                     <h5>color :</h5>
                                     <ul class="color-categories">
                                         <li class="active">
-                                            <a class="tt-pink" href="#" title="Pink"></a>
+                                            <a class="tt-pink" title="Pink"></a>
                                         </li>
                                         <li>
-                                            <a class="tt-blue" href="#" title="Blue"></a>
+                                            <a class="tt-blue" title="Blue"></a>
                                         </li>
                                         <li>
-                                            <a class="tt-yellow" href="#" title="Yellow"></a>
+                                            <a class="tt-yellow" title="Yellow"></a>
                                         </li>
                                     </ul>
                                 </div>

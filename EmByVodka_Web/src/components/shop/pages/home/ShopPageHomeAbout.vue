@@ -9,8 +9,8 @@ export default {
         <div class="container">
             <div class="ttcmsaboutus ttabout d-lg-flex d-md-flex d-sm-flex d-xs-block align-items-center">
                 <div class="ttcmsabout-img col-sm-6 col-xs-12 float-left left-to-right hb-animate-element">
-                    <div class="ttimage"><a href="#"><img src="../../../../assets/img/banner/cms-aboutus.jpg"
-                                alt="banner_1"></a>
+                    <div class="ttimage">
+                        <a><img src="../../../../assets/img/banner/cms-aboutus.jpg" alt="banner_1"></a>
                     </div>
                 </div>
                 <div class="ttcmsabout-desc col-sm-6 col-xs-12 float-left right-to-left hb-animate-element">
@@ -21,7 +21,7 @@ export default {
                     <div class="ttabout-desc mb-40">Duis faucibus enim vitae nunc molestie, nec facilisis arcu
                         pulvinar. Nullam mattis arcu convallis, bibendum dui ac, laoreet est. Vivamus interdum
                         earcu convallis, bibendum dui ac, laoreet est.</div>
-                    <div class="ttbtn"><a href="#" class="btn-primary text-capitalize">go,shop</a></div>
+                    <div class="ttbtn"><router-link to="/products"><a class="btn-primary text-capitalize">go,shop</a></router-link></div>
                 </div>
             </div>
         </div>

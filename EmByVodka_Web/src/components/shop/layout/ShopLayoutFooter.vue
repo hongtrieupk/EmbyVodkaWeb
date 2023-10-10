@@ -17,7 +17,8 @@ export default {
                         <li class="contact-detail links">
                             <span class="address">
                                 <span class="icon"><i class="material-icons">location_on</i></span>
-                                <span class="data"> Son Ky 1 Apartment, CN13 Street, Son Ky Ward, Tan Phu District, HCM City, Viet Nam</span> </span>
+                                <span class="data"> Son Ky 1 Apartment, CN13 Street, Son Ky Ward, Tan Phu District, HCM
+                                    City, Viet Nam</span> </span>
                         </li>
                         <li class="links">
                             <span class="contact">
@@ -39,16 +40,16 @@ export default {
                     </div>
                     <ul id="company" class="list-unstyled collapse">
                         <li>
-                            <a href="#">search</a>
+                            <a>search</a>
                         </li>
                         <li>
-                            <a href="#">New Products</a>
+                            <a>New Products</a>
                         </li>
                         <li>
-                            <a href="category.html">Best Collection</a>
+                            <router-link to="/products"><a>Best Collection</a></router-link>
                         </li>
                         <li>
-                            <a href="wishlist.html">wishlist</a>
+                            <a>wishlist</a>
                         </li>
                     </ul>
                 </div>
@@ -59,16 +60,16 @@ export default {
                     </div>
                     <ul id="products" class="list-unstyled collapse">
                         <li>
-                            <a href="blog-details.html">blog</a>
+                            <a>blog</a>
                         </li>
                         <li>
-                            <a href="about-us.html">about us</a>
+                            <router-link to="/about-us"><a>about us</a></router-link>
                         </li>
                         <li>
-                            <a href="contact-us.html">contact us</a>
+                            <router-link to="/contact-us"><a>contact us</a></router-link>
                         </li>
                         <li>
-                            <a href="my-account.html">my account</a>
+                            <a>my account</a>
                         </li>
                     </ul>
 
@@ -77,12 +78,12 @@ export default {
                 <div class="col-md-4 footer-column newsletter">
                     <div class="block-newsletter">
                         <div class="title">
-                            <a href="#" class="font-weight-normal text-capitalize mb-10">Sign Up For Newsletter</a>
+                            <a class="font-weight-normal text-capitalize mb-10">Sign Up For Newsletter</a>
                         </div>
                         <div class="block-content">
                             <div class="footer-desc">Sign up to our newsletter to get the latest articles, lookbooks,
                                 street style &amp; fashion voucher.</div>
-                            <form method="post" action="contact-us.html">
+                            <form method="post">
                                 <div class="input-group">
                                     <input type="email" name="email" value="" placeholder="Email address.." required=""
                                         class="form-control">
@@ -137,8 +138,7 @@ export default {
                 </div>
             </div>
         </div>
-        <a href="#" id="goToTop" title="Back to top" class="btn-primary"><i
-                class="material-icons arrow-up">keyboard_arrow_up</i></a>
+        <a id="goToTop" title="Back to top" class="btn-primary"><i class="material-icons arrow-up">keyboard_arrow_up</i></a>
 
 
     </footer>

@@ -16,7 +16,7 @@ export default {
     <div class="slider-wrapper my-40 my-sm-25 float-left w-100">
         <div class="slider slider-for owl-carousel">
             <div>
-                <a href="#">
+                <a>
                     <img src="../../../../assets/img/slider/sample-04.jpg" alt="" />
                 </a>
                 <div class="slider-content-wrap center effect_top">
@@ -28,7 +28,7 @@ export default {
                 </div>
             </div>
             <div>
-                <a href="#">
+                <a>
                     <img src="../../../../assets/img/slider/sample-05.jpg" alt="" />
                 </a>
                 <div class="slider-content-wrap center effect_bottom">

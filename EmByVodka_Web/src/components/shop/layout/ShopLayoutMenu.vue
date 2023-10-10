@@ -10,7 +10,7 @@ export default {
         <nav class="navbar navbar-expand-lg navbar-light d-sm-none d-xs-none d-lg-block navbar-full">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand text-uppercase d-none" href="#">Navbar</a>
+            <a class="navbar-brand text-uppercase d-none">Navbar</a>
 
             <!-- Collapsible content -->
             <div class="collapse navbar-collapse">
@@ -32,20 +32,16 @@ export default {
                                     <!--Featured image-->
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a class="menu-item pl-0" href="filter-toggle.html">
-                                                T-Shirt </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">T-Shirt </a></router-link>
                                         </li>
                                         <li>
-                                            <a class="menu-item pl-0" href="off-canvas-left.html">
-                                                Dress </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">Dress </a></router-link>
                                         </li>
                                         <li>
-                                            <a class="menu-item pl-0" href="off-canvas-left.html">
-                                                Jean </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">Jean </a></router-link>
                                         </li>
                                         <li>
-                                            <a class="menu-item pl-0" href="off-canvas-right.html">
-                                                Coats & Jackets </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">Coats & Jackets </a></router-link>
                                         </li>
                                     </ul>
                                 </div>
@@ -97,27 +93,31 @@ export default {
 
                     <!-- Features -->
                     <li class="nav-item dropdown active">
-                        <a class="nav-link text-uppercase" href="#"> Home <span class="sr-only">(current)</span> </a>
+                        <router-link to="/">
+                            <a class="nav-link text-uppercase"> Home <span class="sr-only">(current)</span> </a>
+                        </router-link>
                     </li>
                     <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase" data-toggle="collapse" data-target="#menu3"
-                            aria-controls="menu3" aria-expanded="false" aria-label="Toggle navigation" href="#">Category</a>
+                        <router-link to="/products">
+                            <a class="nav-link dropdown-toggle text-uppercase" data-toggle="collapse" data-target="#menu3"
+                            aria-controls="menu3" aria-expanded="false" aria-label="Toggle navigation">Category</a>
+                        </router-link>                       
                         <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-3 px-3" id="menu3">
                             <div class="row">
                                 <div class="col-md-12 col-xl-4 sub-menu mb-xl-0 mb-4">
                                     <!--Featured image-->
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a class="menu-item pl-0" href="filter-toggle.html">
-                                                filter toggle </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">T-Shirt </a></router-link>
                                         </li>
                                         <li>
-                                            <a class="menu-item pl-0" href="off-canvas-left.html">
-                                                off canvas left </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">Dress </a></router-link>
                                         </li>
                                         <li>
-                                            <a class="menu-item pl-0" href="off-canvas-right.html">
-                                                off canvas right </a>
+                                            <router-link to="/products"><a class="menu-item pl-0">Jean </a></router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to="/products"><a class="menu-item pl-0">Coats & Jackets </a></router-link>
                                         </li>
                                     </ul>
                                 </div>
@@ -133,16 +133,16 @@ export default {
                             </div>
                         </div>
                     </li>
-                    <!-- Technology -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="contact-us.html">Contact Us</a>
+                        <router-link to="/contact-us">
+                            <a class="nav-link text-uppercase">Contact Us</a>
+                        </router-link>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase" href="#">About Us</a>
+                        <router-link to="/contact-us">
+                            <a class="nav-link text-uppercase">About Us</a>
+                        </router-link>
                     </li>
                 </ul>
                 <!-- Links -->

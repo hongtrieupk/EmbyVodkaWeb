@@ -20,13 +20,15 @@ export default {
     <div class="product-layouts">
         <div class="product-thumb">
             <div class="image vertical_scrolling_bottom_to_top">
-                <a href="#">
+                <router-link to="/products">
                     <img :src="mainImgUrl" alt="01" />
-                    <img :src="secondImgUrl" alt="02" class="second_image img-responsive" /> </a>
+                    <img :src="secondImgUrl" alt="02" class="second_image img-responsive" />
+                </router-link>
             </div>
             <div class="thumb-description">
                 <div class="caption">
-                    <h4 class="product-title text-capitalize"><a href="product-details.html">{{ product.name }}</a>
+                    <h4 class="product-title text-capitalize">
+                        <router-link to="/products">{{ product.name }}</router-link>
                     </h4>
                 </div>
                 <div class="rating">
@@ -46,7 +48,7 @@ export default {
                         <button type="button" class="btn btn-primary btn-cart">
                             <i class="material-icons">shopping_cart</i><span>Add to
                                 cart</span></button>
-                        <a href="#" class="btn btn-primary btn-wishlist"><i
+                        <a class="btn btn-primary btn-wishlist"><i
                                 class="material-icons">favorite</i><span>wishlist</span></a>
                         <button type="button" class="btn btn-primary btn-quickview" data-toggle="modal"
                             data-target="#product_view"><i class="material-icons">visibility</i><span>Quick
