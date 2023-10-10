@@ -22,7 +22,9 @@ export default {
                 <div class="slider-content-wrap center effect_top">
                     <div class="slider-title mb-20 text-capitalize float-left w-100">our specials</div>
                     <div class="slider-subtitle mb-50 text-capitalize float-left w-100">fashion trend</div>
-                    <div class="slider-button text-uppercase float-left w-100"><a href=" #">Shop Now</a></div>
+                    <div class="slider-button text-uppercase float-left w-100">
+                        <router-link to="/products"><a>Shop Now</a></router-link>
+                    </div>
                 </div>
             </div>
             <div>
@@ -32,7 +34,9 @@ export default {
                 <div class="slider-content-wrap center effect_bottom">
                     <div class="slider-title mb-20 text-capitalize float-left w-100">about us</div>
                     <div class="slider-subtitle mb-50 text-capitalize float-left w-100">fashion style</div>
-                    <div class="slider-button text-uppercase float-left w-100"><a href=" #">Shop Now</a></div>
+                    <div class="slider-button text-uppercase float-left w-100">
+                        <router-link to="/products"><a>Shop Now</a></router-link>
+                    </div>
                 </div>
             </div>
         </div>

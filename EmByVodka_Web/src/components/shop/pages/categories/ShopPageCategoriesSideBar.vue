@@ -35,19 +35,19 @@ export default {
                     <div id="color" class="sidebar-widget-option-wrapper collapse show">
                         <div class="color-inner">
                             <div class="sidebar-widget-option">
-                                <a href="#" style="background-color: #000000;"></a>
-                                Black
+                                <a style="background-color: green;"></a>
+                                Green
                             </div>
                             <div class="sidebar-widget-option">
-                                <a href="#" style="background-color: #11426b;"></a>
+                                <a style="background-color: #11426b;"></a>
                                 Blue
                             </div>
                             <div class="sidebar-widget-option">
-                                <a href="#" style="background-color: #7d5a3c;"></a>
+                                <a style="background-color: #7d5a3c;"></a>
                                 Brown
                             </div>
                             <div class="sidebar-widget-option">
-                                <a href="#" style="background-color: #ffffff;"></a>
+                                <a style="background-color: #ffffff;"></a>
                                 White
                             </div>
                         </div>

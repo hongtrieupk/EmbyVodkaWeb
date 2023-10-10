@@ -10,7 +10,9 @@ export default {
             <div class="content-wrap float-right text-center">
                 <div class="description text-capitalize mb-30">big sale</div>
                 <div class="title text-capitalize mb-40">get upto 30% off</div>
-                <div class="button"><a class="btn-primary text-capitalize" href="#">shop now</a></div>
+                <div class="button">
+                    <router-link to="/products"><a class="btn-primary text-capitalize">shop now</a></router-link>
+                </div>
             </div>
         </div>
     </div>
