@@ -157,6 +157,48 @@ export function initializePage(){
     /*---------------- End currency ---------------- */
 }
 
+export function owlCarouselProductDetailsPage() {
+    $('.default.small-image-list .nav-add').owlCarousel({
+        items: 4, //1 items above 1000px browser width
+        nav: true,
+        navText: [
+            "<i class='material-icons'>&#xE5CB;</i>",
+            "<i class='material-icons'>&#xE5CC;</i>"
+        ],
+        dots: false,
+        loop: false,
+        autoplayHoverPause: true,
+        autoplay: false,
+        margin: 10,
+        responsive: {
+            1279: {
+                items: 4
+            },
+            992: {
+                items: 3
+            },
+            481: {
+                items: 3
+            },
+            100: {
+                items: 2
+            }
+        }
+    });
+
+    $('.small-image-slider-single-product-tabstyle-3 a').on('click', function (e) {
+        e.preventDefault();
+
+        var $thisParent = $(this).closest('.left-columm');
+        var $href = $(this).attr('href');
+        $thisParent.find('.small-image-slider-single-product-tabstyle-3 a').removeClass('active');
+        $(this).addClass('active');
+
+        $thisParent.find('.product-large-image .tab-pane').removeClass('active show');
+        $thisParent.find('.product-large-image ' + $href).addClass('active show');
+    });
+}
+
 export function owlCarouselBrandLogos() {
     $('.tt-brand').owlCarousel({
         items: 6,
@@ -687,33 +729,7 @@ export function initializeShoppingTheme() {
 
 
     /*--- start product additional js ----*/
-    $('.default.small-image-list .nav-add').owlCarousel({
-        items: 4, //1 items above 1000px browser width
-        nav: true,
-        navText: [
-            "<i class='material-icons'>&#xE5CB;</i>",
-            "<i class='material-icons'>&#xE5CC;</i>"
-        ],
-        dots: false,
-        loop: false,
-        autoplayHoverPause: true,
-        autoplay: false,
-        margin: 10,
-        responsive: {
-            1279: {
-                items: 4
-            },
-            992: {
-                items: 3
-            },
-            481: {
-                items: 3
-            },
-            100: {
-                items: 2
-            }
-        }
-    });
+    
 
     $('.extended.small-image-list .nav-add').owlCarousel({
         items: 3, //1 items above 1000px browser width
@@ -738,19 +754,6 @@ export function initializeShoppingTheme() {
                 items: 2
             }
         }
-    });
-
-
-    $('.small-image-slider-single-product-tabstyle-3 a').on('click', function (e) {
-        e.preventDefault();
-
-        var $thisParent = $(this).closest('.left-columm');
-        var $href = $(this).attr('href');
-        $thisParent.find('.small-image-slider-single-product-tabstyle-3 a').removeClass('active');
-        $(this).addClass('active');
-
-        $thisParent.find('.product-large-image .tab-pane').removeClass('active show');
-        $thisParent.find('.product-large-image ' + $href).addClass('active show');
     });
 
     function autocomplete(inp, arr) {

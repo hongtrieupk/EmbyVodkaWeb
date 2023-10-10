@@ -60,12 +60,12 @@ export default {
 								<a>
 									<i class="material-icons search">search</i>
 									<i class="material-icons close">close</i> </a>
-								<form autocomplete="off" class="search-form">
+								<div autocomplete="off" class="search-form">
 									<div class="autocomplete" style="width:300px;">
 										<input id="myInput" type="text" name="myCountry" placeholder="Search here">
 										<button type="button"><i class="material-icons">search</i></button>
 									</div>
-								</form>
+								</div>
 							</div>
 							<div class="user-info">
 								<button type="button" class="btn">
@@ -94,15 +94,12 @@ export default {
 																	src="../../../assets/img/products/01.jpg" alt="01"
 																	title="01"></a>
 														</td>
-														<td class="text-left product-name"><a href="#">aliquam quaerat
-																voluptatem</a>
+														<td class="text-left product-name"><a href="#">(Cart is being implemented)</a>
 															<div class="quantity float-left w-100">
 																<span class="cart-qty">1 × </span>
 																<span class="text-left price"> $20.00</span>
 															</div>
 														</td>
-														<!-- <td class="text-center close"><a class="close-cart"><i
-																	class="material-icons">close</i></a></td> -->
 													</tr>
 												</tbody>
 											</table>
@@ -143,7 +140,7 @@ export default {
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header text-center">
-					<h4 class="modal-title w-100 font-weight-medium text-left">Sign up</h4>
+					<h4 class="modal-title w-100 font-weight-medium text-left">Sign up (is being implemented)</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -179,7 +176,7 @@ export default {
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header text-center">
-					<h4 class="modal-title w-100 font-weight-medium text-left">Sign in</h4>
+					<h4 class="modal-title w-100 font-weight-medium text-left">Sign in  (is being implemented)</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
