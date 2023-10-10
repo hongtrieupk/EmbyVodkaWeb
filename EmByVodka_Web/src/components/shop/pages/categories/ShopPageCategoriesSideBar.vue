@@ -1,6 +1,37 @@
 <script>
+import { ref } from 'vue'
 export default {
-    name: 'ShopPageCategoriesSideBar'
+    name: 'ShopPageCategoriesSideBar',
+    setup() {
+        const productColors = ref(getProductColors());
+        const productSizes = ref(getProductSizes());
+        return { productColors, productSizes }
+    }
+}
+
+function getProductColors() {
+    return [
+        {
+            cssColor: 'green',
+            title: 'Green'
+        },
+        {
+            cssColor: '#11426b',
+            title: 'Blue'
+        },
+        {
+            cssColor: '#7d5a3c',
+            title: 'Brown'
+        },
+        {
+            cssColor: '#ffffff',
+            title: 'White'
+        }
+    ];
+}
+
+function getProductSizes() {
+    return [ 'XS', 'S', 'M', 'L' ];
 }
 </script>
 <style scoped>
@@ -34,21 +65,9 @@ export default {
                             aria-controls="color">Color</a></h3>
                     <div id="color" class="sidebar-widget-option-wrapper collapse show">
                         <div class="color-inner">
-                            <div class="sidebar-widget-option">
-                                <a style="background-color: green;"></a>
-                                Green
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <a style="background-color: #11426b;"></a>
-                                Blue
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <a style="background-color: #7d5a3c;"></a>
-                                Brown
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <a style="background-color: #ffffff;"></a>
-                                White
+                            <div class="sidebar-widget-option" v-for="color in productColors" :key="color.cssColor">
+                                <a :style="{'background-color': color.cssColor}"></a>
+                                {{color.title}}
                             </div>
                         </div>
                     </div>
@@ -58,21 +77,9 @@ export default {
                             aria-controls="size">Size</a></h3>
                     <div id="size" class="sidebar-widget-option-wrapper collapse show">
                         <div class="size-inner">
-                            <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-1" checked>
-                                <label for="size-1">L <span>(4)</span></label>
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-2" checked>
-                                <label for="size-2">XS <span>(3)</span></label>
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-3" checked>
-                                <label for="size-3">S <span>(3)</span></label>
-                            </div>
-                            <div class="sidebar-widget-option">
-                                <input type="checkbox" id="size-4" checked>
-                                <label for="size-4">Xl <span>(3)</span></label>
+                            <div class="sidebar-widget-option" v-for="size in productSizes" :key="size">
+                                <input type="checkbox" :id="size" checked disabled>
+                                <label for="size-1">{{ size }}</label>
                             </div>
                         </div>
                     </div>
