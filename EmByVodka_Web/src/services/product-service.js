@@ -1,4 +1,4 @@
-import productModel from '../model/product-model'
+import ProductModel from '../model/product-model'
 
 // TODO: remove mock data, integrate  with AWS serverless API Gateway/Lambda
 
@@ -9,7 +9,7 @@ export function getProductById(productId) {
 
 export function searchProducts() {
     return [
-        new productModel(
+        new ProductModel(
             1,
             'aliquam quat voluptatem',
             [
@@ -26,7 +26,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             2,
             'aspetur autodit autfugit',
             [
@@ -43,7 +43,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             3,
             'magni dolores eosquies',
             [
@@ -60,7 +60,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             4,
             'voluptas nulla pariatur',
             [
@@ -77,7 +77,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S', 'L']
         ),
-        new productModel(
+        new ProductModel(
             5,
             'aliquam quat voluptatem',
             [
@@ -94,7 +94,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             6,
             'voluptas sit aspernatur',
             [
@@ -111,7 +111,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S', 'M']
         ),
-        new productModel(
+        new ProductModel(
             7,
             'aspetur autodit autfugit',
             [
@@ -128,7 +128,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             8,
             'aliquam quat voluptatem',
             [
@@ -145,7 +145,7 @@ export function searchProducts() {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             9,
             'magni dolores eosquies',
             [
@@ -175,7 +175,7 @@ export function fetchTrendingProduct() {
 
 export function fetchSpecialProducts() {
     return [
-        new productModel(
+        new ProductModel(
             1,
             'aliquam quat voluptatem',
             [
@@ -187,9 +187,12 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['green', '#11426b', '#7d5a3c', '#ffffff'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             2,
             'aspetur autodit autfugit',
             [
@@ -201,9 +204,12 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             3,
             'magni dolores eosquies',
             [
@@ -215,9 +221,12 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             4,
             'voluptas nulla pariatur',
             [
@@ -229,9 +238,12 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#ffffff', 'green', '#11426b', '#7d5a3c'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S', 'L']
         ),
-        new productModel(
+        new ProductModel(
             5,
             'aliquam quat voluptatem',
             [
@@ -243,9 +255,12 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            5
+            5,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             6,
             'voluptas sit aspernatur',
             [
@@ -257,14 +272,17 @@ export function fetchSpecialProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         )
     ];
 }
 
 function fetchFeaturedProducts() {
     return [
-        new productModel(
+        new ProductModel(
             5,
             'aliquam quat voluptatem',
             [
@@ -276,9 +294,12 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            5
+            5,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             6,
             'voluptas sit aspernatur',
             [
@@ -290,9 +311,12 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             1,
             'aliquam quat voluptatem',
             [
@@ -304,9 +328,12 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             2,
             'aspetur autodit autfugit',
             [
@@ -318,9 +345,12 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             3,
             'magni dolores eosquies',
             [
@@ -332,9 +362,12 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         ),
-        new productModel(
+        new ProductModel(
             4,
             'voluptas nulla pariatur',
             [
@@ -346,14 +379,17 @@ function fetchFeaturedProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#11426b', '#7d5a3c', '#ffffff', 'green'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'M', 'L']
         )
     ];
 }
 
 function fetchLatestProducts() {
     return [
-        new productModel(
+        new ProductModel(
             3,
             'magni dolores eosquies',
             [
@@ -365,9 +401,12 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             4,
             'voluptas nulla pariatur',
             [
@@ -379,9 +418,12 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             5,
             'aliquam quat voluptatem',
             [
@@ -393,9 +435,12 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            5
+            5,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             6,
             'voluptas sit aspernatur',
             [
@@ -407,9 +452,12 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             1,
             'aliquam quat voluptatem',
             [
@@ -421,9 +469,12 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             2,
             'aspetur autodit autfugit',
             [
@@ -435,14 +486,17 @@ function fetchLatestProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         )
     ];
 }
 
 function fetchBestSellerProducts() {
     return [
-        new productModel(
+        new ProductModel(
             1,
             'aliquam quat voluptatem',
             [
@@ -454,9 +508,12 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             2,
             'aspetur autodit autfugit',
             [
@@ -468,9 +525,12 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             3,
             'magni dolores eosquies',
             [
@@ -482,9 +542,12 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            3
+            3,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             4,
             'voluptas nulla pariatur',
             [
@@ -496,9 +559,12 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             5,
             'aliquam quat voluptatem',
             [
@@ -510,9 +576,12 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            5
+            5,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         ),
-        new productModel(
+        new ProductModel(
             6,
             'voluptas sit aspernatur',
             [
@@ -524,7 +593,10 @@ function fetchBestSellerProducts() {
             ],
             150,
             100,
-            4
+            4,
+            ['#7d5a3c', '#ffffff', 'green', '#11426b'],
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            ['XS', 'S']
         )
     ];
 }

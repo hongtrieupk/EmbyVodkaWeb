@@ -1,14 +1,14 @@
 <script>
 import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { owlCarouselProductDetailsPage } from '../../../assets/legacy/vendor-template'
+import { owlCarouselProductDetails } from '../../../assets/legacy/vendor-template'
 import { getProductById } from '../../../services/product-service'
 
 export default {
     name: 'ShopPageProductDetails',
     setup() {
         onMounted(() => {
-            owlCarouselProductDetailsPage();
+            owlCarouselProductDetails();
         })
 
         const route = useRoute();

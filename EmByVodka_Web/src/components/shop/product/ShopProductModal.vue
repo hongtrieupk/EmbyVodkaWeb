@@ -1,7 +1,28 @@
 <script>
+import { ref, onUnmounted, onUpdated } from 'vue'
+import { owlCarouselProductDetails } from '../../../assets/legacy/vendor-template'
+import { shopState } from '../../../services/shop-state.service'
+import ProductModel from '../../../model/product-model'
 export default {
-    name: 'ShopProductModal'
+    name: 'ShopProductModal',
+    setup() {
+        const product = ref(new ProductModel());
+        const subscription = shopState.selectingProduct$.subscribe(p => { product.value = p ?? new ProductModel(); console.log(product)});
+
+        onUnmounted(() => {
+            subscription.unsubscribe();
+        })
+
+        onUpdated(() => {
+            owlCarouselProductDetails();
+        })
+
+        return {
+            product
+        }
+    }
 }
+
 </script>
 
 <template>
@@ -18,105 +39,54 @@ export default {
                     <div class="row">
                         <div class="col-md-6 left-columm">
                             <div class="product-large-image tab-content">
-                                <div class="tab-pane active" id="product-1" role="tabpanel" aria-labelledby="product-tab-1">
+                                <div class="tab-pane" role="tabpanel" v-for="(imgUrl, index) in product.imageUrls"
+                                    :key="index" :id="'product-modal-' + index" :aria-labelledby="'product-tab-' + index"
+                                    :class="{ active: index === 0 }">
                                     <div class="single-img img-full">
-                                        <a href="img/products/01.jpg"><img src="../../../assets/img/products/01.jpg"
-                                                class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="product-2" role="tabpanel" aria-labelledby="product-tab-2">
-                                    <div class="single-img">
-                                        <a href="img/products/02.jpg"><img src="../../../assets/img/products/02.jpg"
-                                                class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="product-3" role="tabpanel" aria-labelledby="product-tab-3">
-                                    <div class="single-img">
-                                        <a href="img/products/03.jpg"><img src="../../../assets/img/products/03.jpg"
-                                                class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="product-4" role="tabpanel" aria-labelledby="product-tab-4">
-                                    <div class="single-img">
-                                        <a href="img/products/04.jpg"><img src="../../../assets/img/products/04.jpg"
-                                                class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="product-5" role="tabpanel" aria-labelledby="product-tab-5">
-                                    <div class="single-img">
-                                        <a href="img/products/05.jpg"><img src="../../../assets/img/products/05.jpg"
-                                                class="img-fluid" alt=""></a>
+                                        <a><img :src="imgUrl"></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="small-image-list float-left w-100">
+                            <div class="default small-image-list float-left w-100">
                                 <div class="nav-add small-image-slider-single-product-tabstyle-3 owl-carousel"
                                     role="tablist">
-                                    <div class="single-small-image img-full">
-                                        <a data-toggle="tab" id="product-tab-1" href="#product-1" class="img active"><img
-                                                src="../../../assets/img/products/01.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                    <div class="single-small-image img-full">
-                                        <a data-toggle="tab" id="product-tab-2" href="#product-2" class="img"><img
-                                                src="../../../assets/img/products/02.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                    <div class="single-small-image img-full">
-                                        <a data-toggle="tab" id="product-tab-3" href="#product-3" class="img"><img
-                                                src="../../../assets/img/products/03.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                    <div class="single-small-image img-full">
-                                        <a data-toggle="tab" id="product-tab-4" href="#product-4" class="img"><img
-                                                src="../../../assets/img/products/04.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                    <div class="single-small-image img-full">
-                                        <a data-toggle="tab" id="product-tab-5" href="#product-5" class="img"><img
-                                                src="../../../assets/img/products/05.jpg" class="img-fluid" alt=""></a>
+                                    <div class="single-small-image img-full" v-for="(imgUrl, index) in product.imageUrls"
+                                        :key="index">
+                                        <a data-toggle="tab" :id="'product-tab-' + index" :href="'#product-modal-' + index"
+                                            class="img active"><img :src="imgUrl" class="img-fluid" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 product_content">
-                            <h4 class="product-title text-capitalize">Product Modal is being implemented to bind the selected product</h4>
+                            <h4 class="product-title text-capitalize"> {{ product.name }} </h4>
                             <div class="rating">
-                                <div class="product-ratings d-inline-block align-middle">
-                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                    <span class="fa fa-stack"><i class="material-icons">star</i></span>
-                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
-                                    <span class="fa fa-stack"><i class="material-icons off">star</i></span>
+                                <div class="product-ratings d-inline-block align-middle">{{ product.rating }}
+                                    <span v-for="n in product.rating" :key="n" class="fa fa-stack"><i
+                                            class="material-icons">star</i></span>
+                                    <span v-for="n in (5 - product.rating)" :key="n" class="fa fa-stack"><i
+                                            class="material-icons off">star</i></span>
                                 </div>
                             </div>
-                            <span class="description float-left w-100">Lorem Ipsum is simply dummy text of the printing
-                                and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                a type specimen book.</span>
-                            <h3 class="price float-left w-100"><span class="regular-price align-middle">$75.00</span><span
-                                    class="old-price align-middle">$60.00</span></h3>
-
+                            <span class="description float-left w-100">{{ product.description }}</span>
+                            <h3 class="price float-left w-100"><span class="regular-price align-middle">${{
+                                product.salePrice }}</span><span class="old-price align-middle">
+                                    ${{ product.price }}</span>
+                            </h3>
                             <div class="product-variants float-left w-100">
                                 <div class="col-md-4 col-sm-6 col-xs-12 size-options d-flex align-items-center">
                                     <h5>Size:</h5>
-
                                     <select class="form-control" name="select">
                                         <option value="" selected="">Size</option>
-                                        <option value="black">Medium</option>
-                                        <option value="white">Large</option>
-                                        <option value="gold">Small</option>
-                                        <option value="rose gold">Extra large</option>
+                                        <option v-for="size in product.sizes" :key="size" :value="size">{{ size }}</option>
                                     </select>
                                 </div>
                                 <div class="color-option d-flex align-items-center">
                                     <h5>color :</h5>
                                     <ul class="color-categories">
-                                        <li class="active">
-                                            <a class="tt-pink" title="Pink"></a>
-                                        </li>
-                                        <li>
-                                            <a class="tt-blue" title="Blue"></a>
-                                        </li>
-                                        <li>
-                                            <a class="tt-yellow" title="Yellow"></a>
-                                        </li>
+                                        <li v-for="color in product.colors" :key="color">
+                                        <a :style="{ 'background-color': color }"></a>
+                                    </li>
                                     </ul>
                                 </div>
                             </div>

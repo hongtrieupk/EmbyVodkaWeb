@@ -157,7 +157,7 @@ export function initializePage(){
     /*---------------- End currency ---------------- */
 }
 
-export function owlCarouselProductDetailsPage() {
+export function owlCarouselProductDetails() {
     $('.default.small-image-list .nav-add').owlCarousel({
         items: 4, //1 items above 1000px browser width
         nav: true,

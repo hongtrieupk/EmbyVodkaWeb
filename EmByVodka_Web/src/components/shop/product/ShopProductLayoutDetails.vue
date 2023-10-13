@@ -1,12 +1,18 @@
 <script>
-import productModel from '../../../model/product-model'
-
+import ProductModel from '../../../model/product-model'
+import { shopState } from '../../../services/shop-state.service'
 export default {
     name: 'ShopProductLayoutDetails',
     props: {
-        product: productModel
+        product: ProductModel
     },
-    setup() {
+    setup(props) {
+        function setSelectingProduct() {
+            shopState.updateSelectingProduct(props.product);
+        }
+        return {
+            setSelectingProduct
+        }
     }
 }
 </script>
@@ -55,7 +61,7 @@ export default {
                                 cart</span></button>
                         <a class="btn btn-primary btn-wishlist"><i
                                 class="material-icons">favorite</i><span>wishlist</span></a>
-                        <button type="button" class="btn btn-primary btn-quickview" data-toggle="modal"
+                        <button type="button" class="btn btn-primary btn-quickview" data-toggle="modal" @click="setSelectingProduct"
                             data-target="#product_view"><i class="material-icons">visibility</i><span>Quick
                                 View</span></button>
                     </div>

@@ -140,7 +140,7 @@ export default {
                     </li>
 
                     <li class="nav-item dropdown">
-                        <router-link to="/contact-us">
+                        <router-link to="/about-us">
                             <a class="nav-link text-uppercase">About Us</a>
                         </router-link>
                     </li>
