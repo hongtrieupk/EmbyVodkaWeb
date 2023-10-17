@@ -14,7 +14,7 @@ export default {
         })
 
         onUpdated(() => {
-            owlCarouselProductDetails();
+            setTimeout(() => { owlCarouselProductDetails()}, 200);
         })
 
         return {

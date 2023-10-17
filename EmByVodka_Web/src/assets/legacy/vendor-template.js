@@ -159,7 +159,7 @@ export function initializePage(){
 
 export function owlCarouselProductDetails() {
     $('.default.small-image-list .nav-add').owlCarousel({
-        items: 4, //1 items above 1000px browser width
+        items: 4,
         nav: true,
         navText: [
             "<i class='material-icons'>&#xE5CB;</i>",
