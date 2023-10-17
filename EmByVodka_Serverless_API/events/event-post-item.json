@@ -1,4 +1,4 @@
 {
     "httpMethod": "POST",
-    "body": "{\"id\": \"id1\",\"name\": \"name1\"}"
+    "body": "{'id': \"999\", \"name\": \"T-Shirt Com Tam VN\", \"imageUrls\": [], \"price\": 100, \"salePrice\": 90, \"colors\": [\"blue\", \"#11426b\", \"#ccc\"], \"description\": \"There is no description for now\", \"sizes\": [\"S\", \"L\"] }"
 }

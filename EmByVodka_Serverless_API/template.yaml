@@ -14,6 +14,7 @@ Resources:
   getAllItemsFunction:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: ./
       Handler: src/handlers/get-all-items.getAllItemsHandler
       Runtime: nodejs18.x
       Architectures:
@@ -23,13 +24,13 @@ Resources:
       Description: A simple example includes a HTTP get method to get all items from
         a DynamoDB table.
       Policies:
-        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        # Give Create/Read/Update/Delete Permissions to the Products table
       - DynamoDBCrudPolicy:
-          TableName: !Ref SampleTable
+          TableName: !Ref Products
       Environment:
         Variables:
           # Make table name accessible as environment variable from function code during execution
-          SAMPLE_TABLE: !Ref SampleTable
+          PRODUCT_TABLE: !Ref Products
       Events:
         Api:
           Type: Api
@@ -43,6 +44,7 @@ Resources:
   getByIdFunction:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: ./
       Handler: src/handlers/get-by-id.getByIdHandler
       Runtime: nodejs18.x
       Architectures:
@@ -52,13 +54,13 @@ Resources:
       Description: A simple example includes a HTTP get method to get one item by
         id from a DynamoDB table.
       Policies:
-        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        # Give Create/Read/Update/Delete Permissions to the Products table
       - DynamoDBCrudPolicy:
-          TableName: !Ref SampleTable
+          TableName: !Ref Products
       Environment:
         Variables:
           # Make table name accessible as environment variable from function code during execution
-          SAMPLE_TABLE: !Ref SampleTable
+          PRODUCT_TABLE: !Ref Products
       Events:
         Api:
           Type: Api
@@ -72,6 +74,7 @@ Resources:
   putItemFunction:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: ./
       Handler: src/handlers/put-item.putItemHandler
       Runtime: nodejs18.x
       Architectures:
@@ -81,13 +84,13 @@ Resources:
       Description: A simple example includes a HTTP post method to add one item to
         a DynamoDB table.
       Policies:
-        # Give Create/Read/Update/Delete Permissions to the SampleTable
+        # Give Create/Read/Update/Delete Permissions to the Products table
       - DynamoDBCrudPolicy:
-          TableName: !Ref SampleTable
+          TableName: !Ref Products
       Environment:
         Variables:
           # Make table name accessible as environment variable from function code during execution
-          SAMPLE_TABLE: !Ref SampleTable
+          PRODUCT_TABLE: !Ref Products
       Events:
         Api:
           Type: Api
@@ -98,15 +101,19 @@ Resources:
   # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
 
   # DynamoDB table to store item: {id: &lt;ID&gt;, name: &lt;NAME&gt;}
-  SampleTable:
-    Type: AWS::Serverless::SimpleTable
+  ProductsTable:
+    Type: AWS::DynamoDB::Table
     Properties:
-      PrimaryKey:
-        Name: id
-        Type: String
+      TableName: Products
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: N
+      KeySchema: 
+        - AttributeName: id
+          KeyType: HASH
       ProvisionedThroughput:
-        ReadCapacityUnits: 2
-        WriteCapacityUnits: 2
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
 
 Outputs:
   WebEndpoint:

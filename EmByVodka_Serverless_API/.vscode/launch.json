@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "API EmByVodka_Serverless_API:putItemFunction",
+            "invokeTarget": {
+                "target": "api",
+                "templatePath": "${workspaceFolder}/template.yaml",
+                "logicalId": "putItemFunction"
+            },
+            "api": {
+                "path": "/",
+                "httpMethod": "post",
+                "payload": {
+                    "json": {"id": 100, "name": "T-Shirt Noodles VN", "imageUrls": [], "price": 75, "salePrice": 60, "colors": ["green", "#11426b", "#7d5a3c"], "description": "There is no description for now", "sizes": ["S", "M"] }
+                }
+            }
+        },
+        // {
+        //     "type": "aws-sam",
+        //     "request": "direct-invoke",
+        //     "name": "Invoke getAllItemsHandler",
+        //     "invokeTarget": {
+        //         "target": "code",
+        //         "lambdaHandler": "src/handlers/get-all-items.getAllItemsHandler",
+        //         "projectRoot": "${workspaceFolder}"
+        //     },
+        //     "lambda": {
+        //         "runtime": "nodejs18.x",
+        //         "payload": {
+        //             "json": {}
+        //         }
+        //     }
+        // }
+    ]
+}
