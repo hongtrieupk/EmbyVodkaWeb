@@ -1,6 +1,4 @@
-// Import getByIdHandler function from get-by-id.mjs 
-import { getByIdHandler } from '../../../src/handlers/get-by-id.mjs'; 
-// Import dynamodb from aws-sdk 
+import { getByIdHandler } from '../../../src/handlers/get-by-id';
 import { DynamoDBDocumentClient, GetCommand } from '@aws-sdk/lib-dynamodb';
 import { mockClient } from "aws-sdk-client-mock";
  
@@ -21,7 +19,7 @@ describe('Test getByIdHandler', () => {
             Item: item,
         }); 
  
-        const event = { 
+        const event: any = { 
             httpMethod: 'GET', 
             pathParameters: { 
                 id: 'id1' 

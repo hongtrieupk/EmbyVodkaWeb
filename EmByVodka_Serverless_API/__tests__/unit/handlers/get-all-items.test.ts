@@ -1,7 +1,6 @@
-// Import getAllItemsHandler function from get-all-items.mjs 
-import { getAllItemsHandler } from '../../../src/handlers/get-all-items.mjs';
-// Import dynamodb from aws-sdk 
+import { getAllItemsHandler } from '../../../src/handlers/get-all-items';
 import { DynamoDBDocumentClient, ScanCommand } from '@aws-sdk/lib-dynamodb';
+import { APIGatewayProxyEvent } from 'aws-lambda';
 import { mockClient } from "aws-sdk-client-mock";
  
 // This includes all tests for getAllItemsHandler() 
@@ -25,7 +24,7 @@ describe('Test getAllItemsHandler', () => {
         };
  
         // Invoke helloFromLambdaHandler() 
-        const result = await getAllItemsHandler(event); 
+        const result = await getAllItemsHandler(event as APIGatewayProxyEvent); 
  
         const expectedResult = { 
             statusCode: 200, 

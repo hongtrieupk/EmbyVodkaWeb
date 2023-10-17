@@ -1,15 +1,16 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 
-import ProductModel from '../model/product-model.mjs';
+import ProductModel from '../model/product-model';
 
 const client = new DynamoDBClient({});
 const ddbDocClient = DynamoDBDocumentClient.from(client);
 
 const tableName = process.env.PRODUCT_TABLE;
 
-export const putItemHandler = async (event) => {
-    if (event.httpMethod !== 'POST') {
+export const putItemHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
+    if (event.httpMethod !== 'POST' || !event?.body) {
         throw new Error(`postMethod only accepts POST method, you tried: ${event.httpMethod} method.`);
     }
 
@@ -30,13 +31,13 @@ export const putItemHandler = async (event) => {
     try {
         const data = await ddbDocClient.send(new PutCommand(params));
         console.log("Success - item added or updated", data);
-    } catch (err) {
+    } catch (err: any) {
         console.log("Error", err.stack);
     }
 
     const response = {
         statusCode: 200,
-        body: JSON.stringify(body)
+        body: JSON.stringify(product)
     };
 
     console.info(`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`);

@@ -1,7 +1,6 @@
-// Import putItemHandler function from put-item.mjs 
-import { putItemHandler } from '../../../src/handlers/put-item.mjs';
-// Import dynamodb from aws-sdk 
+import { putItemHandler } from '../../../src/handlers/put-item';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
+import { APIGatewayProxyEvent } from 'aws-lambda';
 import { mockClient } from "aws-sdk-client-mock";
 // This includes all tests for putItemHandler() 
 describe('Test putItemHandler', function () { 
@@ -13,12 +12,10 @@ describe('Test putItemHandler', function () {
  
     // This test invokes putItemHandler() and compare the result  
     it('should add id to the table', async () => { 
-        const returnedItem = { id: 'id1', name: 'name1' }; 
+        const returnedItem: any = { id: 'id1', name: 'name1' }; 
  
         // Return the specified value whenever the spied put function is called 
-        ddbMock.on(PutCommand).resolves({
-            returnedItem
-        }); 
+        ddbMock.on(PutCommand).resolves(returnedItem); 
  
         const event = { 
             httpMethod: 'POST', 
@@ -26,7 +23,7 @@ describe('Test putItemHandler', function () {
         }; 
      
         // Invoke putItemHandler() 
-        const result = await putItemHandler(event); 
+        const result = await putItemHandler(event as APIGatewayProxyEvent); 
         
         const expectedResult = { 
             statusCode: 200, 
