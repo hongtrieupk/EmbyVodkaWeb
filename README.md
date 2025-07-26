@@ -1,7 +1,13 @@
 # EmbyVodkaWeb
 A Pet project to practice Vue and Aws: a ecommerce website to support fashion shop bussiness
 
-http://embyvodka.s3-website-ap-southeast-1.amazonaws.com/products
+https://embyvodka.azurewebsites.net/index.html (previosly hosted on AWS S3 but temporary change to Azure app service to save cost ^^)
+---
+Hosting on aws s3 (will be integrated with CloudFront 
+in the future). Currently, the project has just been implemented some basic UI features using Vue 
+3 and mock data in the FE side. In the future, AWS serverless will take over the BE role: 
+DynamoDB for database, API Gateway and Lambda for providing REST APIs and Cognito for 
+user management and Authorization 
 
 # embyvod_web
 
